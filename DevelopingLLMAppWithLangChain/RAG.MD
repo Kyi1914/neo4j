@@ -50,7 +50,8 @@ print(data[0])
 ## 2. Splitting
 <img src="./image/17.png">
 
-To counteract lost context during chunk splitting, a chunk overlap is often implemented. We selected two chunks and a chunk overlap shown in green.
+To counteract lost context during chunk splitting, a chunk overlap is often implemented. We selected two chunks and a chunk overlap shown in green.  
+
 <img src="./image/18.png">
 
 #### What is the best document splitting strategy?
@@ -59,8 +60,15 @@ There isn't one document splitting strategy that works for all situations. We sh
 We will compare two document splitting methods: 
 - CharacterTextSplitter and 
 - RecursiveCharacterTextSplitter.   
-Optimizing this document splitting is an active area of research, so keep an eye out for new developments!
+- Many others ...  
+Optimizing this document splitting is an active area of research, so keep an eye out for new developments!  
 
-<img src="./image/19.png">
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
 
-## 3. Storage and Retrieval
+## 3. Storage and Retrieval using vector databases
+
+There are many vector databases available in LangChain. When making the decision on which solution to choose, consider whether an open source solution is required, which may be the case if high customizability is required. Also, consider whether the data can be stored on off-premises on third-party servers - not all cases will permit this. The amount of storage and latency of retrieving results is also a key consideration. Sometimes a lightweight in-memory database will be sufficient, but others will require something more powerful. In this course, we will use ChromaDB because it is lightweight and quick to set up.
+
+<img src="./image/20.png">
+
+<img src="./image/21.png">
