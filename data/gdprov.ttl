@@ -1,0 +1,1115 @@
+# This XML file does not appear to have any style information associated with it. 
+# The document tree is shown below.
+<rdf:RDF xmlns="https://w3id.org/GDPRov#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:terms="http://purl.org/dc/terms/" xml:base="https://w3id.org/GDPRov">
+<owl:Ontology rdf:about="https://w3id.org/GDPRov">
+<owl:versionIRI rdf:resource="https://openscience.adaptcentre.ie/ontologies/gdprov/v/gdprov_v0.7.owl"/>
+<owl:imports rdf:resource="http://purl.org/net/p-plan#"/>
+<owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+<terms:abstract>The General Data Protection Regulation (GDPR) is an European law governing the use of consent and personal data. Some of its obligations involve concepts related to the lifecycles of consent and personal data. Such obligations are concerned with how the collection, use, processing, sharing, and storing of consent and personal data takes place and provides the motivation for a form of documentation that can demonstrate the required information towards compliance. GDPRov is an OWL2 ontology for representing this information as provenance metadata using terms relevant to the GDPR. It extends PROV-O and P-Plan to represent the lifecyles as an abstract model of how things should happen or will happen (future) as well as instance of what has happened (past). The ontology is being developed as part of contributions towards PhD research by its primary author.</terms:abstract>
+<terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-08-01</terms:created>
+<terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/adaptcentre/people/dave_lewis</terms:creator>
+<terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/adaptcentre/people/harshvardhan_pandit</terms:creator>
+<terms:description>GDPRov is an OWL2 ontology to express provenance metadata of consent and data lifecycles towards documenting compliance for GDPR.</terms:description>
+<terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+<terms:modified>2018-04-06</terms:modified>
+<terms:title>The GDPR Provenance ontology</terms:title>
+<vann:preferredNamespacePrefix>gdprov</vann:preferredNamespacePrefix>
+<vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/GDPRov#</vann:preferredNamespaceUri>
+<rdfs:comment>GDPRov is an ontology for expressing provenance metadata in the context of the General Data Protection Regulation (GDPR) and its compliance. It extends PROV-O and P-Plan. PROV-O is the ontology based on the PROV model, a W3C recommendation, while P-Plan is an extension of PROV-O. PROV is used to define terms or 'instances' of what has happened in the past, while P-Plan is used to define the abstract model or 'Plan' of things to happen. GDPRov uses P-Plan to create a template/model/plan as an abstract or model representation of a system which is then recorded using PROV-O instances to show something has happened. The aim of the ontology is to enable representation of consent and personal data lifecycles using terms relevant to GDPR and to facilitate expression of this information towards documentation related to compliance.</rdfs:comment>
+<owl:versionIRI>https://openscience.adaptcentre.ie/ontologies/gdprov/v/gdprov.0.7.owl</owl:versionIRI>
+<owl:versionInfo>0.7</owl:versionInfo>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://purl.org/dc/terms/abstract  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+<!--  http://purl.org/dc/terms/created  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+<!--  http://purl.org/dc/terms/creator  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+<!--  http://purl.org/dc/terms/description  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+<!--  http://purl.org/dc/terms/license  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+<!--  http://purl.org/dc/terms/modified  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+<!--  http://purl.org/dc/terms/title  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+<!--  http://purl.org/vocab/vann/preferredNamespacePrefix  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+<!--  http://purl.org/vocab/vann/preferredNamespaceUri  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+<!--  http://www.w3.org/2002/07/owl#versionIRI  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://purl.org/net/p-plan#hasInputVar  -->
+<owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#hasInputVar"/>
+<!--  http://purl.org/net/p-plan#hasOutputVar  -->
+<owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#hasOutputVar"/>
+<!--  http://purl.org/net/p-plan#isInputVarOf  -->
+<owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#isInputVarOf"/>
+<!--  http://purl.org/net/p-plan#isOutputVarOf  -->
+<owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#isOutputVarOf"/>
+<!--  http://purl.org/net/p-plan#isStepOfPlan  -->
+<owl:ObjectProperty rdf:about="http://purl.org/net/p-plan#isStepOfPlan"/>
+<!--  https://w3id.org/GDPRov#anonymityLevel  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#anonymityLevel">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataEntity"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#AnonymityLevel"/>
+<rdfs:label>anonymity level</rdfs:label>
+<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#archivesConsentAs  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#archivesConsentAs">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentArchivalStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ConsentAgreement"/>
+<rdfs:comment>Archives the consent into some entity</rdfs:comment>
+<rdfs:label>archives consent as</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#collectedConsentFromAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#collectedConsentFromAgent">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#involvesAgent"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#AcquireConsentActivity"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#collectedDataFromAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#collectedDataFromAgent">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#involvesAgent"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataCollectionActivity"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#collectsConsentFromAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#collectsConsentFromAgent">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#involvesAgent"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentAcquisitionStep"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#collectsData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#collectsData">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#isDataCollectedByStep"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:comment>Links data obtained (collected) by the step/activity that acquired it</rdfs:comment>
+<rdfs:label>collectsData</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#collectsDataFromAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#collectsDataFromAgent">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#involvesAgent"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataCollectionStep"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#generatesAnonymisedData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#generatesAnonymisedData">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#generatesData"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#isAnonymisedByStep"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataAnonymisationStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#AnonymisedData"/>
+<rdfs:comment>Indicates that an DataAnonymisationStep transforms a Data object into AnonymisedData</rdfs:comment>
+<rdfs:label>generatesAnonymisedData</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#generatesConsentAgreement  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#generatesConsentAgreement">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#isGeneratedByStep"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ConsentAgreement"/>
+<rdfs:comment>Generates ConsentAgreement which is a the consent granted by the user based on the ConsentAgreementTemplate through a ConsentAcquisitionStep</rdfs:comment>
+<rdfs:label>generatesConsentAgreement</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#generatesData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#generatesData">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasOutputVar"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#isDataGeneratedBy"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:comment>produces data</rdfs:comment>
+<rdfs:label>generatesData</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#hasAnonymityLevel  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#hasAnonymityLevel">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#PersonalData"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#AnonymityLevel"/>
+<rdfs:comment>Indicates the anonymity level of an AnonymisedData object using instances of the AnonymityLevel class</rdfs:comment>
+<rdfs:label>hasAnonymityLevel</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#hasLegalBasis  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#hasLegalBasis">
+<rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#LawfulBasisForProcessing"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">hasLegalBasis</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#hasLegalJustification  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#hasLegalJustification">
+<rdfs:domain rdf:resource="http://purl.org/net/p-plan#Activity"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#LawfulBasisForProcessing"/>
+<rdfs:label>has legal justification</rdfs:label>
+<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#hasSharedDataWith  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#hasSharedDataWith">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataSharingActivity"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">hasSharedDataWith</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#invalidatesData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#invalidatesData">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataDeletionActivity"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Data"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#involvesAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#involvesAgent">
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isAnonymisedByStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isAnonymisedByStep">
+<rdfs:subPropertyOf rdf:resource="https://w3id.org/GDPRov#isDataGeneratedBy"/>
+<rdfs:label>isAnonymisedByStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isConsentAgreementTemplateForStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isConsentAgreementTemplateForStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#usesConsentAgreementTemplate"/>
+<rdfs:label>isConsentAgreementTemplateForStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isDataCollectedByStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isDataCollectedByStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isOutputVarOf"/>
+<rdfs:label>isDataCollectedByStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isDataGeneratedBy  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isDataGeneratedBy">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isOutputVarOf"/>
+<rdfs:label>isDataGeneratedByStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isGeneratedByStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isGeneratedByStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isOutputVarOf"/>
+<rdfs:label>isGeneratedByStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isJustificationForDataStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isJustificationForDataStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#isJustifiedUsingConsentAgreement"/>
+<rdfs:label>isJustificationForDataStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isJustifiedUsingConsentAgreement  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isJustifiedUsingConsentAgreement">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ConsentAgreement"/>
+<rdfs:comment>justifies use of data by step through specified consent agreement</rdfs:comment>
+<rdfs:label>isJustifiedUsingConsentAgreement</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isPartOfProcess  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isPartOfProcess">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isStepOfPlan"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">isPartOfProcess</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isTermsAndConditionsForStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isTermsAndConditionsForStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#usesTermsAndConditions"/>
+<rdfs:label>isTermsAndConditionsForStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#isUsedByStep  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#isUsedByStep">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#usesData"/>
+<rdfs:label>isUsedByStep</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#refersToProcess  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#refersToProcess">
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Process"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#sharesData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#sharesData">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<owl:inverseOf rdf:resource="https://w3id.org/GDPRov#wasSharedBy"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataSharingStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:comment>Indicates sharing of Data through a DataStep</rdfs:comment>
+<rdfs:label>sharesData</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#sharesDataWith  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#sharesDataWith">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataSharingStep"/>
+<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:label>sharesDataWith</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#sharesDataWithThirdParty  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#sharesDataWithThirdParty">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataSharingStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ThirdParty"/>
+<rdfs:comment>Shares data with a third party</rdfs:comment>
+<rdfs:label>sharesDataWithThirdParty</rdfs:label>
+<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#transferredDataToRegion  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#transferredDataToRegion">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#CrossBorderTransferActivity"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">transferredDataToRegion</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#transfersDataToRegion  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#transfersDataToRegion">
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#CrossBorderDataTransfer"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">transfersDataToRegion</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#usesConsentAgreement  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#usesConsentAgreement">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ConsentAgreement"/>
+<rdfs:comment>uses Consent Agreement entity</rdfs:comment>
+<rdfs:label>uses Consent Agreement</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#usesConsentAgreementTemplate  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#usesConsentAgreementTemplate">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentAcquisitionStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ConsentAgreementTemplate"/>
+<rdfs:comment>links a Consent Acquisition Step with the Consent Agreement Template used to acquire consent</rdfs:comment>
+<rdfs:label>usesConsentAgreementTemplate</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#usesData  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#usesData">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:comment>links step with data used</rdfs:comment>
+<rdfs:label>usesData</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#usesTermsAndConditions  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#usesTermsAndConditions">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#hasInputVar"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#ConsentAcquisitionStep"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#TermsAndConditions"/>
+<rdfs:comment>Links a Consent Acquisition Step with the Terms and Conditions presented to the user when acquiring Consent</rdfs:comment>
+<rdfs:label>usesTermsAndConditions</rdfs:label>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#wasSharedBy  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#wasSharedBy">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+</owl:ObjectProperty>
+<!--  https://w3id.org/GDPRov#wasSharedWithThirdParty  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/GDPRov#wasSharedWithThirdParty">
+<rdfs:subPropertyOf rdf:resource="http://purl.org/net/p-plan#isInputVarOf"/>
+<rdfs:domain rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:range rdf:resource="https://w3id.org/GDPRov#ThirdParty"/>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://purl.org/net/p-plan#Activity  -->
+<owl:Class rdf:about="http://purl.org/net/p-plan#Activity"/>
+<!--  http://purl.org/net/p-plan#Entity  -->
+<owl:Class rdf:about="http://purl.org/net/p-plan#Entity"/>
+<!--  http://purl.org/net/p-plan#Plan  -->
+<owl:Class rdf:about="http://purl.org/net/p-plan#Plan"/>
+<!--  http://purl.org/net/p-plan#Step  -->
+<owl:Class rdf:about="http://purl.org/net/p-plan#Step"/>
+<!--  http://purl.org/net/p-plan#Variable  -->
+<owl:Class rdf:about="http://purl.org/net/p-plan#Variable"/>
+<!--  http://www.w3.org/ns/prov#Agent  -->
+<owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+<!--  https://w3id.org/GDPRov#AcquireConsentActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AcquireConsentActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentActivity"/>
+<rdfs:comment>Is an activity that acquires consent.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ObtainingConsent"/>
+<rdfs:label>Acquire Consent Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentAcquisitionStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AnonymisationActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AnonymisationActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationActivity"/>
+<rdfs:comment>Is an activity that anonymises data.</rdfs:comment>
+<rdfs:label>Anonymisation Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataAnonymisationStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AnonymisedData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AnonymisedData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalData"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://w3id.org/GDPRov#hasAnonymityLevel"/>
+<owl:someValuesFrom rdf:resource="https://w3id.org/GDPRov#AnonymityLevel"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>Represents data that has been Anonymised at some level reflected by the hasAnonymityLevel object property</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#AnonymousData"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#PseudoAnonymousData"/>
+<rdfs:label>AnonymisedData</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#AnonymisedDataEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AnonymisedDataEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AnonymisedDataEntity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalDataEntity"/>
+<rdfs:comment>Is an entity where personal data has been anonymised to some extent.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#AnonymousData"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#PseudoAnonymousData"/>
+<rdfs:label>Anonymised Data Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#AnonymisedData"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AnonymityLevel  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AnonymityLevel">
+<rdfs:comment>Provides a way to express the Anonymity Level of AnonymisedData objects through the object property hasAnonymityLevel</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#AnonymousData"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#PseudoAnonymousData"/>
+<rdfs:label>AnonymityLevel</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AppointProcessor  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AppointProcessor">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>Reflects the process(es) used to appoint processors</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#AppointmentOfProcessors"/>
+<rdfs:label>Appoint Processor</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ArchiveConsentActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ArchiveConsentActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentActivity"/>
+<rdfs:comment>An activity that archives given/acquired consent for storage.</rdfs:comment>
+<rdfs:label>Archive Consent Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentArchivalStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#AutomatedStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#AutomatedStep">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">AutomatedStep</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentAcquisitionStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentAcquisitionStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+<rdfs:comment xml:lang="en">ConsentAcquisitionStep deals with acquiring consent from the user. It uses Terms and Conditions along with the appropriate Consent Model as the basis of obtaining consent from the user. The output of this step is the consent object agreed upon by the user.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ObtainingConsent"/>
+<rdfs:label xml:lang="en">Consent Acquisition Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#AcquireConsentActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentActivity">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Activity"/>
+<rdfs:comment>Is an activity dealing with consent.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ConsentActivity"/>
+<rdfs:label>Consent Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentAgreement  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentAgreement">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#ConsentAgreementTemplate"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#Data"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#TermsAndConditions"/>
+<rdfs:comment xml:lang="en">ConsentAgreement reflects the consent provided by the user based on the provided Terms and Conditions and Consent Agreement Templates. It is the set of permissions the user has specifically provided or refused to provide. This consent is useful to provide justification of activities that use user data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#GivenConsent"/>
+<rdfs:label xml:lang="en">ConsentAgreement</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#GivenConsent"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentAgreementTemplate  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentAgreementTemplate">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#Data"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#TermsAndConditions"/>
+<rdfs:comment xml:lang="en">This is a template for consent requested from the user.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Consent"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ObligationForObtainingConsent"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ValidConsent"/>
+<rdfs:label xml:lang="en">ConsentAgreementTemplate</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#GivenConsentTemplate"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentArchivalStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentArchivalStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+<rdfs:comment xml:lang="en">ConsentArchivalStep archives acquired consent to form a record of the consent given by the user.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DemonstratingConsent"/>
+<rdfs:label xml:lang="en">Consent Archival Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ArchiveConsentActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentModificationStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentModificationStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentStep"/>
+<rdfs:comment xml:lang="en">ConsentModificationStep deals with modifications to the consent by the user. It invalidates the previous consent object and produces a new updated consent object that represents the modified consent.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ObligationForObtainingConsent"/>
+<rdfs:label xml:lang="en">Consent Modification Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ModifyConsentActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentStep">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+<rdfs:comment xml:lang="en">A ConsentStep acts/interacts with/uses Consent</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ConsentActivity"/>
+<rdfs:label xml:lang="en">Consent Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentWithdrawalProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentWithdrawalProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment xml:lang="en">A ConsentWithdrawalProcess deals with the withdrawal of consent by the user and the corresponding activity carried out within the system</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#WithdrawingConsent"/>
+<rdfs:label xml:lang="en">Consent Withdrawal Process</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentWithdrawalStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ConsentWithdrawalStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ConsentWithdrawalStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentModificationStep"/>
+<rdfs:comment xml:lang="en">ConsentWithdrawalStep deals with withdrawal of consent</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#CanBeWithdrawnEasilyConsentObligation"/>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#WithdrawingConsent"/>
+<rdfs:label xml:lang="en">Consent Withdrawal Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#WithdrawConsentActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#Controller  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#Controller">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ThirdParty"/>
+<rdfs:comment xml:lang="en">A ThirdPartyDataController is a Third Party entity that acts as a Data Controller</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+<rdfs:label xml:lang="en">Controller</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ControllerRepresentative  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ControllerRepresentative">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:comment>A Representative of the Controller</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ControllerRepresentative"/>
+<rdfs:label>Controller Representative</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#CrossBorderDataTransfer  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#CrossBorderDataTransfer">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment>Reflects cross-border transfer of data</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#CrossBorderTransfer"/>
+<rdfs:label>Cross-border Data Transfer</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#CrossBorderTransferActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#CrossBorderTransferActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#CrossBorderTransferActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that transfer data across borders (as defined in the GDPR).</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#CrossBorderTransfer"/>
+<rdfs:label>Cross Border Transfer Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#CrossBorderDataTransfer"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DPO  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DPO">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:comment>The Data Protection Officer appointed to an organisation.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DPO"/>
+<rdfs:label>Data Protection Officer (DPO)</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#Data  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#Data">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+<owl:disjointWith rdf:resource="https://w3id.org/GDPRov#TermsAndConditions"/>
+<rdfs:comment xml:lang="en">Represents class of data collected or generated through various activities</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Data"/>
+<rdfs:label xml:lang="en">Data</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataAccessProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataAccessProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment xml:lang="en">A DataAccessProcess corresponds to the request made by an user for access to their data within the system. This process is responsible for handling the request process and providing the appropriate data to the end user.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ProvideCopyOfPersonalData"/>
+<rdfs:label xml:lang="en">Data Access Process</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataActivity">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Activity"/>
+<rdfs:comment>Is an activity involving data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DataActivity"/>
+<rdfs:label>Data Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataAnonymisationStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataAnonymisationStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationStep"/>
+<rdfs:comment xml:lang="en">DataAnonymisationStep anonymises data by transforming it from one form to another along the anonymisation chain. Anonymisation can be represented as a spectrum going from raw user data to pseudo-anonymised data that can be de-anonymised by the same agent/organisation to pseudo-anonymous data that cannot be deanonymised internally, but may be done by external agents who have access to other data, and finally to completely anonymised data.</rdfs:comment>
+<rdfs:label xml:lang="en">Data Anonymisation Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#AnonymisationActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataArchivalActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataArchivalActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStorageActivity"/>
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationActivity"/>
+<rdfs:comment>Is an activity that archives data. Archival is transformation of data into some form for storage.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ArchiveData"/>
+<rdfs:label>Data Archival Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataArchivalStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataArchivalProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataArchivalProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment xml:lang="en">A DataArchivalProcess describes the process of data archival</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ArchiveData"/>
+<rdfs:label xml:lang="en">Data Archival Process</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataArchivalStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataArchivalStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStorageStep"/>
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationStep"/>
+<rdfs:comment xml:lang="en">DataArchivalStep archives data by transforming it and storing it</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ArchiveData"/>
+<rdfs:label xml:lang="en">Data Archival Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataArchivalActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataBreachActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataBreachActivity">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Activity"/>
+<rdfs:comment>Is an activity dealing with data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreach"/>
+<rdfs:label>Data Breach Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataBreachStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataBreachRecord  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataBreachRecord">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+<rdfs:comment>A record of a data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#MaintainRecordOfBreach"/>
+<rdfs:label>Data Breach Record</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataBreachStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataBreachStep">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+<rdfs:comment>Step representing an action associated with data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreach"/>
+<rdfs:label>Data Breach Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataBreachActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataCollectionActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataCollectionActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that collects or acquires data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#CollectionOfPersonalData"/>
+<rdfs:label>Data Collection Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataCollectionStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataCollectionStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataCollectionStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">DataCollectionStep collects data from the user</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#CollectionOfPersonalData"/>
+<rdfs:label xml:lang="en">Data Collection Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataCollectionActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataDeanonymisationStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataDeanonymisationStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationStep"/>
+<rdfs:comment xml:lang="en">DataDeanonymisationStep deanonymises data by transforming it from one form to another along the anonymisation chain.</rdfs:comment>
+<rdfs:label xml:lang="en">Data Deanonymisation Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DeAnonymisationActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataDeletionActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataDeletionActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that deletes or erases data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#EraseData"/>
+<rdfs:label>Data Deletion Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataDeletionStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataDeletionStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataDeletionStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">DataDeletionStep deletes data from within the system; The deletion is expressed as prov:invalidated over the dataset.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#EraseData"/>
+<rdfs:label xml:lang="en">Data Deletion Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataDeletionActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataEntity">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Entity"/>
+<rdfs:comment>Represents a data entity.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Data"/>
+<rdfs:label>Data Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#Data"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataErasureProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataErasureProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment xml:lang="en">A DataErasureProcess is responsible for handling the data erasure of a data subject.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#EraseData"/>
+<rdfs:label xml:lang="en">Data Erasure Process</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataRectificationProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataRectificationProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment xml:lang="en">A DataRectificationProcess describes the process of data rectification, which is the correction of data already present within the system</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RectifyData"/>
+<rdfs:label xml:lang="en">Data Rectification Process</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataSharingActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataSharingActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that shares data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ShareDataWithThirdParty"/>
+<rdfs:label>Data Sharing Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataSharingStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataSharingStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataSharingStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">DataSharingStep shares data with another agent/organisation. These may be internal or external entities.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ShareDataWithThirdParty"/>
+<rdfs:label xml:lang="en">Data Sharing Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataSharingActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataStep">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+<rdfs:comment xml:lang="en">A DataStep deals with data</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DataActivity"/>
+<rdfs:label xml:lang="en">Data Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataStepWithoutProvenance  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataStepWithoutProvenance">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:label>Data Step without Provenance</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataStorageActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataStorageActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that stores data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#StoreData"/>
+<rdfs:label>Data Storage Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataStorageStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataStorageStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataStorageStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">DataStorageStep stores data within the system</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#StoreData"/>
+<rdfs:label xml:lang="en">Data Storage Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataStorageActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataSubject  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataSubject">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:comment>An individual or entity</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+<rdfs:label>Data Subject</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataTransferActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataTransferActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:label>Data Transfer Activity</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataTransferStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataTransferStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DataTransferStep</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataTransformationActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataTransformationActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that transforms data.</rdfs:comment>
+<rdfs:label>Data Transformation Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataTransformationStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataTransformationStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataTransformationStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">DataTransformationStep transforms data from one form into another.</rdfs:comment>
+<rdfs:label xml:lang="en">Data Transformation Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataTransformationActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataUsageActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataUsageActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that uses data. Can also be termed as 'Processing' of data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#UseData"/>
+<rdfs:label>Data Usage Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataUsageStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DataUsageStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DataUsageStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment xml:lang="en">A DataUsageStep is a DataStep that uses existing data present within the system</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Processing"/>
+<rdfs:label xml:lang="en">Data Usage Step</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataUsageActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DeAnonymisationActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DeAnonymisationActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataTransformationActivity"/>
+<rdfs:comment>Is an activity that deanonymises data.</rdfs:comment>
+<rdfs:label>DeAnonymisation Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#DataDeanonymisationStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#DirectMarketing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#DirectMarketing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Marketing"/>
+<rdfs:comment>Direct Marketing where the marketing is done directly to the data subject.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DirectMarketing"/>
+<rdfs:label>Direct Marketing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#GivenConsent  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#GivenConsent">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Entity"/>
+<rdfs:comment>Represents the given consent by the data subject.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#GivenConsent"/>
+<rdfs:label>Given Consent</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentAgreement"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#GivenConsentTemplate  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#GivenConsentTemplate">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Entity"/>
+<rdfs:comment>Is the template used to obtain the given consent.</rdfs:comment>
+<rdfs:label>Given Consent Template</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentAgreementTemplate"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleDataBreachProcess  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleDataBreachProcess">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>A process that defines the actions that should be undertaken in event of a data breach</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#DataBreach"/>
+<rdfs:label>HandleDataBreachProcess</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightOfDataPortability  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightOfDataPortability">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right of data portability.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightOfDataPortability"/>
+<rdfs:label>Handle Right of Data Portability</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightOfErasure  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightOfErasure">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right of erasure.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightOfErasure"/>
+<rdfs:label>Handle Right of Erasure</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToAccessPersonalData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToAccessPersonalData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to access personal data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightOfErasure"/>
+<rdfs:label>Handle Right to access Personal Data</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToBasicInfoAboutProcessing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToBasicInfoAboutProcessing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to basic information about processing.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToBasicInformationAboutProcessing"/>
+<rdfs:label>Handle Right to basic information about Processing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToNoAutomatedProcessing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToNoAutomatedProcessing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to not be processed automatically.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToNotBeEvaluatedThroughAutomatedProcessing"/>
+<rdfs:label>Handle Right to not be evaluated through Automated Processing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToObjectDirectMarketing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToObjectDirectMarketing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to object to direct marketing.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToObjectForDirectMarketting"/>
+<rdfs:label>Handle Right to Object to Direct Marketing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToObjectProcessing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToObjectProcessing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to object to processing.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToObjectToProcessing"/>
+<rdfs:label>Handle Right to Object to Processing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToRectification  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToRectification">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to rectification of personal data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToRectification"/>
+<rdfs:label>Handle Right to Rectification</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToRestrictProcessing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToRestrictProcessing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to restrict processing.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToRestrictProcessing"/>
+<rdfs:label>Handle Right to restrict Processing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleRightToTransparency  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleRightToTransparency">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process or series of steps that handle the right to transparency.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RightToTransparency"/>
+<rdfs:label>Handle Right to Transparency</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#HandleSAR  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#HandleSAR">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">HandleSAR</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ImpactAssessment  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ImpactAssessment">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>Represents the process or collection of steps representing the Impact Assessment.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ImpactAssessment"/>
+<rdfs:label>Impact Assessment</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#JointController  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#JointController">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Controller"/>
+<rdfs:comment>A Joint Controller is where two or more controllers jointly determine the purposes and means of processing.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#JointController"/>
+<rdfs:label>Joint Controller(s)</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#Marketing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#Marketing">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>Marketing as a process or collection of steps.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Marketing"/>
+<rdfs:label>Marketing</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ModifyConsentActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ModifyConsentActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ConsentActivity"/>
+<rdfs:comment>Is an activity that modifies given consent.</rdfs:comment>
+<rdfs:label>Modify Consent Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentModificationStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#MonitorCompliance  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#MonitorCompliance">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Process"/>
+<rdfs:comment>The process of monitoring compliance as mandated by the GDPR.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#MonitorCompliance"/>
+<rdfs:label>Monitor Compliance</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyController  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyController">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachStep"/>
+<rdfs:comment>Step that notifies the controller of data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreachToController"/>
+<rdfs:label>Notify Controller</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyControllerActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyControllerActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyControllerActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachActivity"/>
+<rdfs:comment>Is an activity that notifies controller about data breach</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreachToController"/>
+<rdfs:label>Notify Controller Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyController"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyDPA  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyDPA">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachStep"/>
+<rdfs:comment>Step that notifies the Data Protection Authorities of a data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreachToDPAWithin72Hours"/>
+<rdfs:label>Notify Data Protection Authority</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyDPAActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyDPAActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyDPAActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachActivity"/>
+<rdfs:comment>Is an activity that notifies data protection authorities about data breach</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreachToDPAWithin72Hours"/>
+<rdfs:label>Notify DPA Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyDPA"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyDataSubject  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyDataSubject">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachStep"/>
+<rdfs:comment>Step that notifies the data subject of data breach.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach"/>
+<rdfs:label>Notify Data Subject</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyDataSubjectActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#NotifyDataSubjectActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#NotifyDataSubjectActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataBreachActivity"/>
+<rdfs:comment>Is an activity that notifies data subjects about data breach</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach"/>
+<rdfs:label>Notify Data Subject Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#NotifyDataSubject"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#PersonalData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#PersonalData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Data"/>
+<rdfs:comment xml:lang="en">PersonalData is any data pertaining to the user which can contain personally identifiable information or a data set generated by the system using personally identifiable information acquired through direct or indirect means</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#PersonalData"/>
+<rdfs:label xml:lang="en">PersonalData</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#PersonalDataEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#PersonalDataEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#PersonalDataEntity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataEntity"/>
+<rdfs:comment>Represents a personal data entity.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#PersonalData"/>
+<rdfs:label>Personal Data Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#PersonalData"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#Process  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#Process">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Plan"/>
+<rdfs:comment xml:lang="en">A Process describes a 'Plan' of action for carrying out a particular activity that uses or is related to Data or Consent</rdfs:comment>
+<rdfs:label xml:lang="en">Process</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#Processor  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#Processor">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ThirdParty"/>
+<rdfs:comment xml:lang="en">A ThirdPartyDataProcessor is a Third Party entity that acts as a Data Processor</rdfs:comment>
+<rdfs:label rdf:resource="https://w3id.org/GDPRtEXT#Processor"/>
+<rdfs:label xml:lang="en">Processor</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ProcessorRepresentative  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ProcessorRepresentative">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:comment>A representative of the Processor.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ProcessorRepresentative"/>
+<rdfs:label>Processor Representative</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ProvideCopyOfPersonalData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ProvideCopyOfPersonalData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment>A step that provides the data subject with a copy of their personal data.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ProvideCopyOfPersonalData"/>
+<rdfs:label>Provide copy of Personal Data</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#RectifyData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#RectifyData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataStep"/>
+<rdfs:comment>Rectifies existing data</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#RectifyData"/>
+<rdfs:label>Rectify Data</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#RectifyDataActivity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#RectifyDataActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#RectifyDataActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#DataActivity"/>
+<rdfs:comment>Is an activity that recitifies data.</rdfs:comment>
+<rdfs:label>Rectify Data Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#RectifyData"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ReportDataBreach  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ReportDataBreach">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#HandleDataBreachProcess"/>
+<rdfs:comment>The process of reporting after a data breach has taken place.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#ReportDataBreach"/>
+<rdfs:label>Report Data Breach</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#SensitiveData  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#SensitiveData">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalData"/>
+<rdfs:comment>Personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#SensitivePersonalData"/>
+<rdfs:label>Sensitive Personal Data</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#SensitiveDataEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#SensitiveDataEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#SensitiveDataEntity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalDataEntity"/>
+<rdfs:comment>Is an entity containing sensitive personal information.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#SensitivePersonalData"/>
+<rdfs:label>Sensitive Data Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#SensitiveData"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#SubProcessor  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#SubProcessor">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#Processor"/>
+<rdfs:comment>A Processor appointed under or by another Processor is a Sub-Processor.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#SubProcessor"/>
+<rdfs:label>Sub-Processor</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#TermsAndConditions  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#TermsAndConditions">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+<rdfs:comment xml:lang="en">Terms and Conditions of usage as provided to the user in agreement of provided service</rdfs:comment>
+<rdfs:label xml:lang="en">TermsAndConditions</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#TermsAndConditionsEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#TermsAndConditionsEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#TermsAndConditionsEntity">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Entity"/>
+<rdfs:comment>Represents the Terms and Conditions entity.</rdfs:comment>
+<rdfs:label>Terms and Conditions Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#TermsAndConditions"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#ThirdParty  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#ThirdParty">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+<rdfs:comment xml:lang="en">A ThirdParty is any external entitiy associated with some internal activity</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#Entity"/>
+<rdfs:label xml:lang="en">ThirdParty</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#UserIdentifier  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#UserIdentifier">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalData"/>
+<rdfs:comment xml:lang="en">An UserIdentifier is a specific way to identify the user through a unique ID or a combination of other attributes</rdfs:comment>
+<rdfs:label xml:lang="en">UserIdentifier</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#UserIdentifierEntity"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#UserIdentifierEntity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#UserIdentifierEntity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#PersonalDataEntity"/>
+<rdfs:comment>Is an entity acting as the user identifier. Or contains an identifier.</rdfs:comment>
+<rdfs:label>User Identifier Entity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#UserIdentifier"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#UserInputStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#UserInputStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#UserInteractionStep"/>
+<rdfs:label>User Input Step</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#UserInteractionStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#UserInteractionStep">
+<rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+<rdfs:label>User Interaction Step</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#UserOutputStep  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#UserOutputStep">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#UserInteractionStep"/>
+<rdfs:label>User Output Step</rdfs:label>
+</owl:Class>
+<!--  https://w3id.org/GDPRov#WithdrawConsentActivity  -->
+<owl:Class rdf:about="https://w3id.org/GDPRov#WithdrawConsentActivity">
+<rdfs:subClassOf rdf:resource="https://w3id.org/GDPRov#ModifyConsentActivity"/>
+<rdfs:comment>Is an activity that withdraws given consent. Can also term it so as to depict withdrawal as a modification of consent.</rdfs:comment>
+<rdfs:isDefinedBy rdf:resource="https://w3id.org/GDPRtEXT#WithdrawingConsent"/>
+<rdfs:label>Withdraw Consent Activity</rdfs:label>
+<rdfs:seeAlso rdf:resource="https://w3id.org/GDPRov#ConsentWithdrawalStep"/>
+</owl:Class>
+<!--  https://w3id.org/GDPRtEXT#LawfulBasisForProcessing  -->
+<owl:Class rdf:about="https://w3id.org/GDPRtEXT#LawfulBasisForProcessing"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  https://w3id.org/GDPRov#Anonymised  -->
+<owl:NamedIndividual rdf:about="https://w3id.org/GDPRov#Anonymised">
+<rdfs:comment>Anonymised represents the Anonymisation level where the data cannot be de-anonymised to retrieve personally identifiable information.</rdfs:comment>
+<rdfs:label>Anonymised</rdfs:label>
+</owl:NamedIndividual>
+<!--  https://w3id.org/GDPRov#DeAnonymised  -->
+<owl:NamedIndividual rdf:about="https://w3id.org/GDPRov#DeAnonymised">
+<rdfs:comment>DeAnonymised represents the Anonymisation level where the data is completely de-anonymised and contains directly accessible personally identifiable information.</rdfs:comment>
+<rdfs:label>DeAnonymised</rdfs:label>
+</owl:NamedIndividual>
+<!--  https://w3id.org/GDPRov#PseudoAnonymised  -->
+<owl:NamedIndividual rdf:about="https://w3id.org/GDPRov#PseudoAnonymised">
+<rdfs:comment>PseudoAnonymised represents the Anonymisation level where the data is anonymised but cannot be de-anonymised without additional data which is NOT accessible to the data-holding organisation to retrieve personally identifiable information.</rdfs:comment>
+<rdfs:label>PseudoAnonymised</rdfs:label>
+</owl:NamedIndividual>
+<!--  https://w3id.org/GDPRov#PseudoOrganisationalAnonymised  -->
+<owl:NamedIndividual rdf:about="https://w3id.org/GDPRov#PseudoOrganisationalAnonymised">
+<rdfs:comment>PseudoOrganisationalAnonymised represents the Anonymisation level where the data is anonymised but cannot be de-anonymised without additional data which is accessible to the data-holding organisation to recreate the de-anonymised information.</rdfs:comment>
+<rdfs:label>PseudoOrganisationalOrganised</rdfs:label>
+</owl:NamedIndividual>
+</rdf:RDF>
+<!--  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/  -->
