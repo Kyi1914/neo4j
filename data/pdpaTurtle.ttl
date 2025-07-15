@@ -100,8 +100,8 @@
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Biometric_Data
 :Biometric_Data rdf:type owl:Class ;
                 rdfs:subClassOf :Sensitive_Personal_Data ;
-                rdfs:comment "testing >> this is biometric data" .
-
+                rdfs:comment "testing >> this is biometric data" ;
+                rdfs:label "Biometric Data" .
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Chapter
 :Chapter rdf:type owl:Class ;
