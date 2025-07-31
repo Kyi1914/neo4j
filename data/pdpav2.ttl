@@ -20,6 +20,14 @@
 :rendered rdf:type owl:AnnotationProperty .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#eli:title
+:eli:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#eli:title_alternative
+:eli:title_alternative rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/involves
 :involves rdf:type owl:AnnotationProperty .
 
@@ -180,6 +188,15 @@
         rdfs:comment "The Office of the Personal Data Protection Committee." ;
         rdfs:isDefinedBy "Section6" ;
         rdfs:label "Office" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PDPA
+:PDPA rdf:type owl:Class ;
+      rdfs:subClassOf :LegalResources ;
+      :eli:title "PDPA"@en ,
+                 "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
+      rdfs:comment "The PDPA is Thailand's comprehensive personal data protection law, enacted in 2019, that regulates the collection, use, and disclosure of personal data and provides rights to data subjects.\" ;"@en ;
+      rdfs:label "Personal Data Protection Act (PDPA) Thailand"@en .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person
