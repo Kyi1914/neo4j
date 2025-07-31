@@ -1,0 +1,1766 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33">
+    <Prefix name="" IRI="http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Committee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetentOfficial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataObjectionActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataProcessingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disclosure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Minister"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestrictionOfUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecretaryGeneral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Biometric_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Chapter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Collection_of_Personal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Consent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Consent_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Controller_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Criminal_Records"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Cross-border_Transfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Cult_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DPO_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DataRecordkeepingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Protection_Officer_DPO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Data_Subject_Rights"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Disability_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Erase_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Ethnic_Origin_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Genetic_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Health_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Insensitive_Personal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LegalResources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Obtaining_Consent_from_Data_Subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Personal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Political_Opinions_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Processing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Processor_Obligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Racial_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Rectify_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Religious_or_Philosophical_Beliefs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RightOfAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Right_of_Data_Portability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Right_to_Erasure_or_Destruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Right_to_Object_Processing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Right_to_Rectification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Right_to_Restriction_of_Use"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Section"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Sexual_Behavior_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Share_Personal_Data_with_Third_Party"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Trade_Union_Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Use_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Withdrawing_Given_Consent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_Chapter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_Part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_Section"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/is_part_of_Chapter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/is_part_of_Part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/is_part_of_Section"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#rendered"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/involves"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accuracy"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Committee"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetentOfficial"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataAccess"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataObjectionActivity"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataProcessingActivity"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disclosure"/>
+        <Class IRI="#DataProcessingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Minister"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictionOfUse"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecretaryGeneral"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Activity"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Biometric_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Chapter"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Collection_of_Personal_Data"/>
+        <Class IRI="#DataProcessingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Consent"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Consent_Activity"/>
+        <Class IRI="/Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Controller_Obligation"/>
+        <Class IRI="/Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Criminal_Records"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Cross-border_Transfer"/>
+        <Class IRI="#Disclosure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Cult_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DPO_Obligation"/>
+        <Class IRI="/Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DataRecordkeepingActivity"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Activity"/>
+        <Class IRI="/Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Controller"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Processor"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Protection_Officer_DPO"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Subject"/>
+        <Class IRI="/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Data_Subject_Rights"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Disability_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Entity"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Erase_Data"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Ethnic_Origin_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Genetic_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Health_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Insensitive_Personal_Data"/>
+        <Class IRI="/Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Obligation"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Obtaining_Consent_from_Data_Subject"/>
+        <Class IRI="/Consent_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Part"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Personal_Data"/>
+        <Class IRI="/Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Political_Opinions_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Processing"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Processor_Obligation"/>
+        <Class IRI="/Obligation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Racial_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Rectify_Data"/>
+        <Class IRI="/Data_Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Religious_or_Philosophical_Beliefs"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RightOfAccess"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Right_of_Data_Portability"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Right_to_Erasure_or_Destruction"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Right_to_Object_Processing"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Right_to_Rectification"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Right_to_Restriction_of_Use"/>
+        <Class IRI="/Data_Subject_Rights"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Section"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sensitive_Personal_Data"/>
+        <Class IRI="/Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Sexual_Behavior_Data"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Share_Personal_Data_with_Third_Party"/>
+        <Class IRI="#Disclosure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Trade_Union_Information"/>
+        <Class IRI="/Sensitive_Personal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Use_Data"/>
+        <Class IRI="#DataProcessingActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Withdrawing_Given_Consent"/>
+        <Class IRI="/Consent_Activity"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_Chapter"/>
+        <ObjectProperty IRI="/has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_Part"/>
+        <ObjectProperty IRI="/has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_Section"/>
+        <ObjectProperty IRI="/has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/is_part_of_Chapter"/>
+        <ObjectProperty IRI="/is_part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/is_part_of_Part"/>
+        <ObjectProperty IRI="/is_part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/is_part_of_Section"/>
+        <ObjectProperty IRI="/is_part_of"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/has_Chapter"/>
+        <ObjectProperty IRI="/is_part_of_Chapter"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/has_Part"/>
+        <ObjectProperty IRI="/is_part_of_Part"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/has_Section"/>
+        <ObjectProperty IRI="/is_part_of_Section"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_Chapter"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_Part"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_Section"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/is_part_of_Chapter"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/is_part_of_Part"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/is_part_of_Section"/>
+        <Class IRI="/LegalResourceSubdivision"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_Chapter"/>
+        <Class IRI="/Chapter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_Part"/>
+        <Class IRI="/Part"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_Section"/>
+        <Class IRI="/Section"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/is_part_of_Chapter"/>
+        <Class IRI="/Chapter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/is_part_of_Part"/>
+        <Class IRI="/Part"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/is_part_of_Section"/>
+        <Class IRI="/Section"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#Accuracy</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#Accuracy</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Accuracy</IRI>
+        <Literal>Ensuring personal data remains accurate, complete, and not misleading.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Accuracy</IRI>
+        <Literal>Section 35</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Accuracy</IRI>
+        <Literal>Accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Committee</IRI>
+        <Literal>The Personal Data Protection Committee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Committee</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Committee</IRI>
+        <Literal>Committee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CompetentOfficial</IRI>
+        <Literal>Any person appointed by the Minister to perform acts under this Act.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#CompetentOfficial</IRI>
+        <Literal>Section6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CompetentOfficial</IRI>
+        <Literal>CompetentOfficial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataAccess</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataAccess</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataAccess</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataAccess</IRI>
+        <Literal>The right to request and receive a copy of one’s personal data in a machine-readable format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataAccess</IRI>
+        <Literal>Section 30</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataAccess</IRI>
+        <Literal>DataAccessActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <Literal>The right to object to collection, use, or disclosure of personal data under certain circumstances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <Literal>Section 32</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataObjectionActivity</IRI>
+        <Literal>DataObjectionActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <IRI>/Data_Processor</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <Literal>Any operation on personal data, including collection, use, or disclosure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <Literal>Section5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataProcessingActivity</IRI>
+        <Literal>DataProcessingActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#Disclosure</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#Disclosure</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Disclosure</IRI>
+        <Literal>Sharing personal data with another domestic party or transferring it to a foreign country or international organisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Disclosure</IRI>
+        <Literal>Section 27, Section 28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Disclosure</IRI>
+        <Literal>DisclosureofPersonalData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Minister</IRI>
+        <Literal>The Minister who is in charge under this Act</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Minister</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Minister</IRI>
+        <Literal>Minister</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Office</IRI>
+        <Literal>The Office of the Personal Data Protection Committee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Office</IRI>
+        <Literal>Section6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Office</IRI>
+        <Literal>Office</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal>A natural person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Person</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#RestrictionOfUse</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>#RestrictionOfUse</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RestrictionOfUse</IRI>
+        <Literal>Suspending the use of personal data instead of erasure, e.g. during dispute resolution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#RestrictionOfUse</IRI>
+        <Literal>Section34</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RestrictionOfUse</IRI>
+        <Literal>RestrictionOfUse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SecretaryGeneral</IRI>
+        <Literal>The Secretary-General of the Personal Data Protection Committee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SecretaryGeneral</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SecretaryGeneral</IRI>
+        <Literal>SecretaryGeneral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Activity</IRI>
+        <Literal>Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Biometric_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Biometric_Data</IRI>
+        <Literal xml:lang="en">Biometric data is further defined as personal data arising from the use of techniques or technology related to the physical or behavioral dominance of a person, which can be used to identify that person apart from others, such as facial recognition data, iris recognition data, or fingerprint recognition data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Biometric_Data</IRI>
+        <Literal>Biometric Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Chapter</IRI>
+        <Literal>Chapter in PDPA Thailand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Chapter</IRI>
+        <IRI>https://pdpathailand.com/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Chapter</IRI>
+        <Literal>Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Collection_of_Personal_Data</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Collection_of_Personal_Data</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Collection_of_Personal_Data</IRI>
+        <Literal>This refers to the act of gathering or acquiring Personal Data.
+
+The act of obtaining personal data from a data subject or a third party. Collection must be for a notified purpose and limited to what’s necessary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Collection_of_Personal_Data</IRI>
+        <Literal>Section 22</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Collection_of_Personal_Data</IRI>
+        <Literal>DataCollectionActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Consent</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Consent</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Consent</IRI>
+        <Literal xml:lang="en">Based on the Personal Data Protection Act, B.E. 2562 (2019), &quot;consent&quot; is a fundamental concept for handling personal data, and several provisions outline what constitutes valid consent and the activities surrounding it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Consent</IRI>
+        <Literal>Consent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Consent_Activity</IRI>
+        <Literal>The act by which a data subject gives or withdraws consent as prescribed in Section 19 of the PDPA.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Consent_Activity</IRI>
+        <Literal>Section19 (Part 1, General Provisions, Chapter II)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Consent_Activity</IRI>
+        <Literal>ConsentActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#definition"/>
+        <IRI>/Controller_Obligation</IRI>
+        <Literal>A duty imposed by the Personal Data Protection Act on an actor.
+
+“Section 37 The Data Controller shall have the following duties: (1) provide appropriate security measures… (4) notify the Office of any Personal Data breach…”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Controller_Obligation</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Controller_Obligation</IRI>
+        <Literal xml:lang="en">Duties of Data Controllers:
+
+- Implement appropriate security measures to prevent loss, unauthorized access, use, alteration, correction, or disclosure of Personal Data. [Section 37]
+
+ - Prevent unlawful use or disclosure by recipients of Personal Data
+
+-  Establish systems for erasure or destruction of Personal Data when retention ends, it&apos;s no longer necessary, or upon data subject&apos;s request/withdrawal of consent (with specific exceptions for retention) [Section 24 (1) or (4) , Section 26 (5) (a) or (b), Section 33 paragraph 5]
+
+- Notify the Office of any Personal Data breach without undue delay (within 72 hours if feasible), unless unlikely to risk rights and freedoms. High-risk breaches must also be notified to data subjects
+
+- Foreign Data Controllers (as defined in section 5 paragraph two) must designate a representative in Thailand [Section 38]
+
+- Maintain records of processing activities, including collected data, purposes, retention, and security measures [Section 39]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Controller_Obligation</IRI>
+        <Literal>Section 37</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Controller_Obligation</IRI>
+        <Literal>ControllerObligations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Criminal_Records</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Criminal_Records</IRI>
+        <Literal>Criminal Records</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cross-border_Transfer</IRI>
+        <Literal>Sending/Transferring to a foreign country or international organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cross-border_Transfer</IRI>
+        <Literal>CrossBorderTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cult_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cult_Data</IRI>
+        <Literal>Cult Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#definition"/>
+        <IRI>/DPO_Obligation</IRI>
+        <Literal>Section 42 The data protection officer shall have the following duties: (1) give advice… (4) keep confidentiality of Personal Data…</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/DPO_Obligation</IRI>
+        <IRI>/Data_Protection_Officer_DPO</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DPO_Obligation</IRI>
+        <Literal>Advice &amp; Guidance: Give advice to the Data Controller or Data Processor (and their employees or service-providers) on complying with the PDPA. thailand-personal-data-…
+
+Monitoring &amp; Investigation: Investigate how the Data Controller or Data Processor (and their employees or service-providers) collect, use, or disclose personal data to ensure PDPA compliance. thailand-personal-data-…
+
+Coordination with the PDPC: Coordinate and cooperate with the Personal Data Protection Office whenever problems arise in personal-data processing under the PDPA. thailand-personal-data-…
+
+Confidentiality: Maintain the confidentiality of any personal data accessed in the course of duty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DPO_Obligation</IRI>
+        <Literal>Chapter IV, Section 42</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DPO_Obligation</IRI>
+        <Literal>Section 42</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DPO_Obligation</IRI>
+        <Literal>DataProtectionOfficerObligations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data</IRI>
+        <Literal>Any information in any form, including both personal and non-personal data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data</IRI>
+        <Literal>Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/DataRecordkeepingActivity</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/DataRecordkeepingActivity</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DataRecordkeepingActivity</IRI>
+        <Literal>Documenting all personal data processing activities, including categories of data, purposes, retention, and security measures.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DataRecordkeepingActivity</IRI>
+        <Literal>Section39</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DataRecordkeepingActivity</IRI>
+        <Literal>DataRecordkeepingActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#rendered"/>
+        <IRI>/Data_Activity</IRI>
+        <Literal>Personal Data Processing Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Activity</IRI>
+        <Literal>Generic class for any operation on personal data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Activity</IRI>
+        <Literal>Chapter II (part II - IV)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Activity</IRI>
+        <Literal>DataActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#definition"/>
+        <IRI>/Data_Controller</IRI>
+        <Literal>“A Person or a juristic person having the power and duties to make decisions regarding the collection, use, or disclosure of the Personal Data.”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Controller</IRI>
+        <Literal xml:lang="en">&quot;Data Controller&quot; refers to a Person or juristic person with the power and duties to make decisions regarding the collection, use, or disclosure of Personal Data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Controller</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Controller</IRI>
+        <Literal>DataController</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Processor</IRI>
+        <Literal xml:lang="en">&quot;Data Processor&quot; is a Person or juristic person who operates in relation to the collection, use, or disclosure of Personal Data pursuant to the orders given by or on behalf of a Data Controller, and is not the Data Controller themselves.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Processor</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Processor</IRI>
+        <Literal>DataProcessor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Protection_Officer_DPO</IRI>
+        <Literal xml:lang="en">Duties of Data Protection Officer (DPO)
+- Required for public authorities, organizations with large-scale regular monitoring of Personal Data, or those whose core activity involves processing sensitive Personal Data.
+- Duties include: advising the Data Controller/Processor and employees on compliance, investigating performance, coordinating with the Office, and maintaining confidentiality.
+- Data Controllers and Data Processors must support the DPO&apos;s work and must not dismiss them for performing duties under the Act.
+
+[Section 41]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Protection_Officer_DPO</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Protection_Officer_DPO</IRI>
+        <Literal>DataProtectionOfficer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Subject</IRI>
+        <Literal xml:lang="en">An individual or entity to whom their personal data relates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Subject</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Subject</IRI>
+        <Literal>DataSubject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Data_Subject_Rights</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Data_Subject_Rights</IRI>
+        <Literal xml:lang="en">PDPA provides several rights to the data subjects.
+
+[Chapter III]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Data_Subject_Rights</IRI>
+        <Literal>ChapterIII</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Data_Subject_Rights</IRI>
+        <Literal>DataSubjectRights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Disability_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Disability_Data</IRI>
+        <Literal>Disability Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Entity</IRI>
+        <Literal>Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Entity</IRI>
+        <Literal>Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Erase_Data</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Erase_Data</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Erase_Data</IRI>
+        <Literal>Erasing, destroying or anonymising personal data when no longer needed or upon request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Erase_Data</IRI>
+        <Literal>Section 33</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Erase_Data</IRI>
+        <Literal>RetentionandErasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Ethnic_Origin_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Ethnic_Origin_Data</IRI>
+        <Literal>Ethnic Origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Genetic_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Genetic_Data</IRI>
+        <Literal>Genetic Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Health_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Health_Data</IRI>
+        <Literal>HealthData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Insensitive_Personal_Data</IRI>
+        <Literal xml:lang="en">Definition: &quot;Personal Data&quot; means any information relating to a Person, which enables the identification of such Person, whether directly or indirectly, but not including the information of the deceased Persons in particular. This serves as the broad, overarching definition for what constitutes personal data under the Act</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Insensitive_Personal_Data</IRI>
+        <Literal>General Personal Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LegalResourceSubdivision</IRI>
+        <Literal>Legal Resource Subdivision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LegalResources</IRI>
+        <Literal>Legal Resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Obligation</IRI>
+        <Literal>A duty imposed by the Personal Data Protection Act on an actor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Obligation</IRI>
+        <Literal>Obligations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Obtaining_Consent_from_Data_Subject</IRI>
+        <IRI>/Consent</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Obtaining_Consent_from_Data_Subject</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Obtaining_Consent_from_Data_Subject</IRI>
+        <Literal>The act of getting consent from Data Subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Obtaining_Consent_from_Data_Subject</IRI>
+        <Literal>Grant Consent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Part</IRI>
+        <Literal>Part in PDPA Thailand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Part</IRI>
+        <IRI>https://pdpathailand.com/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Part</IRI>
+        <Literal>Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Personal_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Personal_Data</IRI>
+        <Literal>“Personal Data” means any information relating to a Person, which enables the identification of such Person, whether directly or indirectly, but not including the information of the deceased Persons in particular;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Personal_Data</IRI>
+        <Literal>PDPA 
+Chapter 1, Section 6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Personal_Data</IRI>
+        <Literal>PersonalData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Political_Opinions_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Political_Opinions_Data</IRI>
+        <Literal>Political Opinions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Processing</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Processing</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Processing</IRI>
+        <Literal>Implementing measures to protect data and notifying the PDPC and data subjects of any breaches.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Processing</IRI>
+        <Literal>Section 37</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Processing</IRI>
+        <Literal>DataSecurityAndBreachNotificationActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#definition"/>
+        <IRI>/Processor_Obligation</IRI>
+        <Literal>“Section 40 The Personal Data Processor shall have the following duties: (1) carry out activities only pursuant to instructions… (3) prepare and maintain records…”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Processor_Obligation</IRI>
+        <IRI>/Data_Processor</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Processor_Obligation</IRI>
+        <Literal xml:lang="en">Duties of Data Processors: [Section 40]
+- Process Personal Data only according to the Data Controller&apos;s instructions, unless instructions are unlawful. If a Data Processor fails to comply, they may be regarded as a Data Controller for that activity.
+- Implement appropriate security measures and notify the Data Controller of breaches.
+- Maintain records of processing activities.
+- An agreement between Data Controller and Data Processor is required to ensure compliance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Processor_Obligation</IRI>
+        <Literal>Section 40</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Processor_Obligation</IRI>
+        <Literal>ProcessorObligations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Racial_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Racial_Data</IRI>
+        <Literal>Racial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Rectify_Data</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Rectify_Data</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Rectify_Data</IRI>
+        <Literal>Correcting personal data at the request of the data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Rectify_Data</IRI>
+        <Literal>Section36</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Rectify_Data</IRI>
+        <Literal>Rectification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Religious_or_Philosophical_Beliefs</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Religious_or_Philosophical_Beliefs</IRI>
+        <Literal>Religious or Philosophical Beliefs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/RightOfAccess</IRI>
+        <IRI>#DataAccess</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/RightOfAccess</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RightOfAccess</IRI>
+        <Literal xml:lang="en">To request access to and obtain a copy of their Personal Data and to request disclosure of the acquisition of Personal Data obtained without their consent.
+
+[Chapter III, Section 30]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RightOfAccess</IRI>
+        <Literal>[Chapter III, Section 30]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RightOfAccess</IRI>
+        <Literal>Right of Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_of_Data_Portability</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Right_of_Data_Portability</IRI>
+        <Literal xml:lang="en">To receive their Personal Data in a readable and transferable format and to request its transfer to other Data Controllers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Right_of_Data_Portability</IRI>
+        <Literal>Right to Data Portability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Erasure_or_Destruction</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Right_to_Erasure_or_Destruction</IRI>
+        <Literal xml:lang="en">To request the erasure, destruction, or anonymization of their Personal Data if it&apos;s no longer necessary, consent is withdrawn without other legal grounds, objection rights are exercised, or data was unlawfully processed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Right_to_Erasure_or_Destruction</IRI>
+        <Literal>Section 33</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Right_to_Erasure_or_Destruction</IRI>
+        <Literal>Right to  Erasure or Destruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Object_Processing</IRI>
+        <IRI>#DataObjectionActivity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Object_Processing</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Right_to_Object_Processing</IRI>
+        <Literal xml:lang="en">To object to the collection, use, or disclosure of their Personal Data in specific circumstances, such as for direct marketing, or when collected under certain exemptions unless compelling legitimate grounds exist</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Right_to_Object_Processing</IRI>
+        <Literal>Section 32</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Right_to_Object_Processing</IRI>
+        <Literal>Right to Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Rectification</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Rectification</IRI>
+        <IRI>/Rectify_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Right_to_Rectification</IRI>
+        <Literal xml:lang="en">To request the Data Controller to ensure their Personal Data remains accurate, up-to-date, complete, and not misleading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Right_to_Rectification</IRI>
+        <Literal>Section 32 Paragraph 3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Right_to_Rectification</IRI>
+        <Literal>Right to Rectification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Restriction_of_Use</IRI>
+        <IRI>#RestrictionOfUse</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Right_to_Restriction_of_Use</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Right_to_Restriction_of_Use</IRI>
+        <Literal xml:lang="en">To request the restriction of the use of their Personal Data under certain conditions, for example, while data accuracy is being verified or if the data needs to be retained for legal claims</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Right_to_Restriction_of_Use</IRI>
+        <Literal>Section 36</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Right_to_Restriction_of_Use</IRI>
+        <Literal>Right to Restriction of Use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Section</IRI>
+        <Literal>Section in PDPA (Chapter &gt; Section or Chapter &gt; Part &gt; Section)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Section</IRI>
+        <IRI>https://pdpathailand.com/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Section</IRI>
+        <Literal>Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Sensitive_Personal_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Sensitive_Personal_Data</IRI>
+        <Literal xml:lang="en">Sensitive Personal Data (requiring explicit consent and subject to stricter prohibitions)
+The collection of this specific kind of personal data is generally prohibited without explicit consent from the data subject, except under certain specified circumstances
+This category includes data pertaining to:
+        ▪ Racial or ethnic origin
+        ▪ Political opinions
+        ▪ Cult, religious or philosophical beliefs
+        ▪ Sexual behavior
+        ▪ Criminal records
+        ▪ Health data
+        ▪ Disability
+        ▪ Trade union information
+        ▪ Genetic data
+        ▪ Biometric data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Sensitive_Personal_Data</IRI>
+        <Literal>Section 26</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Sensitive_Personal_Data</IRI>
+        <Literal>Sensitive Personal Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Sexual_Behavior_Data</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Sexual_Behavior_Data</IRI>
+        <Literal>Sexual Behavior</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Share_Personal_Data_with_Third_Party</IRI>
+        <Literal>Share with third party or another domestic party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Trade_Union_Information</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Trade_Union_Information</IRI>
+        <Literal>Trade Union Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Use_Data</IRI>
+        <IRI>/Data_Controller</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Use_Data</IRI>
+        <IRI>/Personal_Data</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Use_Data</IRI>
+        <Literal>Any operation whereby the controller applies, handles, or otherwise utilises personal data for the purposes notified.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Use_Data</IRI>
+        <Literal>Section 27</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Use_Data</IRI>
+        <Literal>DataUseActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Withdrawing_Given_Consent</IRI>
+        <IRI>/Consent</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/involves"/>
+        <IRI>/Withdrawing_Given_Consent</IRI>
+        <IRI>/Data_Subject</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Withdrawing_Given_Consent</IRI>
+        <Literal>The act by which a data subject withdraws previously given consent (Section 19).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Withdrawing_Given_Consent</IRI>
+        <Literal>Withdraw Consent Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/has_Chapter</IRI>
+        <Literal>indicates the legal resource has the Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_Chapter</IRI>
+        <Literal>hasChapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/has_Part</IRI>
+        <Literal>indicates the legal resource has the Part under some Chapters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_Part</IRI>
+        <Literal>hasPart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/has_Section</IRI>
+        <Literal>indicates the legal resource has the Section under Chapter or Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_Section</IRI>
+        <Literal>hasSection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/is_part_of_Chapter</IRI>
+        <Literal>represents a legal resource subdivision to be part of a chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/is_part_of_Chapter</IRI>
+        <Literal>is part of Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/is_part_of_Part</IRI>
+        <Literal>represents a legal resource subdivision to be part of a  Part under some Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/is_part_of_Part</IRI>
+        <Literal>is part of Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/is_part_of_Section</IRI>
+        <Literal>represents a legal resource subdivision to be part of a Section under Part or Chapter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/is_part_of_Section</IRI>
+        <Literal>is part of Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#Concept</IRI>
+        <Literal>skos:concept</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
