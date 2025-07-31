@@ -1,0 +1,667 @@
+Prefix(:=<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33>
+
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse>))
+Declaration(Class(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral>))
+Declaration(Class(:Activity))
+Declaration(Class(:Biometric_Data))
+Declaration(Class(:Chapter))
+Declaration(Class(:Collection_of_Personal_Data))
+Declaration(Class(:Consent))
+Declaration(Class(:Consent_Activity))
+Declaration(Class(:Controller_Obligation))
+Declaration(Class(:Criminal_Records))
+Declaration(Class(:Cross-border_Transfer))
+Declaration(Class(:Cult_Data))
+Declaration(Class(:DPO_Obligation))
+Declaration(Class(:Data))
+Declaration(Class(:DataRecordkeepingActivity))
+Declaration(Class(:Data_Activity))
+Declaration(Class(:Data_Controller))
+Declaration(Class(:Data_Processor))
+Declaration(Class(:Data_Protection_Officer_DPO))
+Declaration(Class(:Data_Subject))
+Declaration(Class(:Data_Subject_Rights))
+Declaration(Class(:Disability_Data))
+Declaration(Class(:Entity))
+Declaration(Class(:Erase_Data))
+Declaration(Class(:Ethnic_Origin_Data))
+Declaration(Class(:Genetic_Data))
+Declaration(Class(:Health_Data))
+Declaration(Class(:Insensitive_Personal_Data))
+Declaration(Class(:LegalResourceSubdivision))
+Declaration(Class(:LegalResources))
+Declaration(Class(:Obligation))
+Declaration(Class(:Obtaining_Consent_from_Data_Subject))
+Declaration(Class(:Part))
+Declaration(Class(:Personal_Data))
+Declaration(Class(:Political_Opinions_Data))
+Declaration(Class(:Processing))
+Declaration(Class(:Processor_Obligation))
+Declaration(Class(:Racial_Data))
+Declaration(Class(:Rectify_Data))
+Declaration(Class(:Religious_or_Philosophical_Beliefs))
+Declaration(Class(:RightOfAccess))
+Declaration(Class(:Right_of_Data_Portability))
+Declaration(Class(:Right_to_Erasure_or_Destruction))
+Declaration(Class(:Right_to_Object_Processing))
+Declaration(Class(:Right_to_Rectification))
+Declaration(Class(:Right_to_Restriction_of_Use))
+Declaration(Class(:Section))
+Declaration(Class(:Sensitive_Personal_Data))
+Declaration(Class(:Sexual_Behavior_Data))
+Declaration(Class(:Share_Personal_Data_with_Third_Party))
+Declaration(Class(:Trade_Union_Information))
+Declaration(Class(:Use_Data))
+Declaration(Class(:Withdrawing_Given_Consent))
+Declaration(Class(<http://www.w3.org/2004/02/skos/core#Concept>))
+Declaration(ObjectProperty(:has_Chapter))
+Declaration(ObjectProperty(:has_Part))
+Declaration(ObjectProperty(:has_Section))
+Declaration(ObjectProperty(:has_part))
+Declaration(ObjectProperty(:is_part_of))
+Declaration(ObjectProperty(:is_part_of_Chapter))
+Declaration(ObjectProperty(:is_part_of_Part))
+Declaration(ObjectProperty(:is_part_of_Section))
+Declaration(AnnotationProperty(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#definition>))
+Declaration(AnnotationProperty(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#rendered>))
+Declaration(AnnotationProperty(:involves))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :has_Chapter (hasChapter)
+
+AnnotationAssertion(rdfs:comment :has_Chapter "indicates the legal resource has the Chapter")
+AnnotationAssertion(rdfs:label :has_Chapter "hasChapter")
+SubObjectPropertyOf(:has_Chapter :has_part)
+InverseObjectProperties(:has_Chapter :is_part_of_Chapter)
+ObjectPropertyDomain(:has_Chapter :LegalResourceSubdivision)
+ObjectPropertyRange(:has_Chapter :Chapter)
+
+# Object Property: :has_Part (hasPart)
+
+AnnotationAssertion(rdfs:comment :has_Part "indicates the legal resource has the Part under some Chapters")
+AnnotationAssertion(rdfs:label :has_Part "hasPart")
+SubObjectPropertyOf(:has_Part :has_part)
+InverseObjectProperties(:has_Part :is_part_of_Part)
+ObjectPropertyDomain(:has_Part :LegalResourceSubdivision)
+ObjectPropertyRange(:has_Part :Part)
+
+# Object Property: :has_Section (hasSection)
+
+AnnotationAssertion(rdfs:comment :has_Section "indicates the legal resource has the Section under Chapter or Part")
+AnnotationAssertion(rdfs:label :has_Section "hasSection")
+SubObjectPropertyOf(:has_Section :has_part)
+InverseObjectProperties(:has_Section :is_part_of_Section)
+ObjectPropertyDomain(:has_Section :LegalResourceSubdivision)
+ObjectPropertyRange(:has_Section :Section)
+
+# Object Property: :is_part_of_Chapter (is part of Chapter)
+
+AnnotationAssertion(rdfs:comment :is_part_of_Chapter "represents a legal resource subdivision to be part of a chapter")
+AnnotationAssertion(rdfs:label :is_part_of_Chapter "is part of Chapter")
+SubObjectPropertyOf(:is_part_of_Chapter :is_part_of)
+ObjectPropertyDomain(:is_part_of_Chapter :LegalResourceSubdivision)
+ObjectPropertyRange(:is_part_of_Chapter :Chapter)
+
+# Object Property: :is_part_of_Part (is part of Part)
+
+AnnotationAssertion(rdfs:comment :is_part_of_Part "represents a legal resource subdivision to be part of a  Part under some Chapter")
+AnnotationAssertion(rdfs:label :is_part_of_Part "is part of Part")
+SubObjectPropertyOf(:is_part_of_Part :is_part_of)
+ObjectPropertyDomain(:is_part_of_Part :LegalResourceSubdivision)
+ObjectPropertyRange(:is_part_of_Part :Part)
+
+# Object Property: :is_part_of_Section (is part of Section)
+
+AnnotationAssertion(rdfs:comment :is_part_of_Section "represents a legal resource subdivision to be part of a Section under Part or Chapter")
+AnnotationAssertion(rdfs:label :is_part_of_Section "is part of Section")
+SubObjectPropertyOf(:is_part_of_Section :is_part_of)
+ObjectPropertyDomain(:is_part_of_Section :LegalResourceSubdivision)
+ObjectPropertyRange(:is_part_of_Section :Section)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> (Accuracy)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> "Ensuring personal data remains accurate, complete, and not misleading.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> "Section 35")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> "Accuracy")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Accuracy> :Data_Activity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee> (Committee)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee> "The Personal Data Protection Committee.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee> "Section 6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee> "Committee")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Committee> :Entity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial> (CompetentOfficial)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial> "Any person appointed by the Minister to perform acts under this Act.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial> "Section6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial> "CompetentOfficial")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfficial> :Entity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> (DataAccessActivity)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> :Data_Subject)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> "The right to request and receive a copy of one’s personal data in a machine-readable format.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> "Section 30")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> "DataAccessActivity")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess> :Data_Activity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> (DataObjectionActivity)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> :Data_Subject)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> "The right to object to collection, use, or disclosure of personal data under certain circumstances.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> "Section 32")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> "DataObjectionActivity")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity> :Data_Activity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> (DataProcessingActivity)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> :Data_Processor)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> "Any operation on personal data, including collection, use, or disclosure.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> "Section5")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> "DataProcessingActivity")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity> :Data_Activity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> (DisclosureofPersonalData)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> "Sharing personal data with another domestic party or transferring it to a foreign country or international organisation.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> "Section 27, Section 28")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> "DisclosureofPersonalData")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure> <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity>)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister> (Minister)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister> "The Minister who is in charge under this Act")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister> "Section 6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister> "Minister")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister> :Entity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office> (Office)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office> "The Office of the Personal Data Protection Committee.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office> "Section6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office> "Office")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office> :Entity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person> (Person)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person> "A natural person.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person> "Section 6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person> "Person")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person> :Entity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> (RestrictionOfUse)
+
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> :Data_Controller)
+AnnotationAssertion(:involves <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> :Personal_Data)
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> "Suspending the use of personal data instead of erasure, e.g. during dispute resolution.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> "Section34")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> "RestrictionOfUse")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse> :Data_Activity)
+
+# Class: <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral> (SecretaryGeneral)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral> "The Secretary-General of the Personal Data Protection Committee.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral> "Section 6")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral> "SecretaryGeneral")
+SubClassOf(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral> :Entity)
+
+# Class: :Activity (Activity)
+
+AnnotationAssertion(rdfs:label :Activity "Activity")
+SubClassOf(:Activity <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :Biometric_Data (Biometric Data)
+
+AnnotationAssertion(:involves :Biometric_Data :Data_Subject)
+AnnotationAssertion(rdfs:comment :Biometric_Data "Biometric data is further defined as personal data arising from the use of techniques or technology related to the physical or behavioral dominance of a person, which can be used to identify that person apart from others, such as facial recognition data, iris recognition data, or fingerprint recognition data."@en)
+AnnotationAssertion(rdfs:label :Biometric_Data "Biometric Data")
+SubClassOf(:Biometric_Data :Sensitive_Personal_Data)
+
+# Class: :Chapter (Chapter)
+
+AnnotationAssertion(rdfs:comment :Chapter "Chapter in PDPA Thailand")
+AnnotationAssertion(rdfs:isDefinedBy :Chapter <https://pdpathailand.com/>)
+AnnotationAssertion(rdfs:label :Chapter "Chapter")
+SubClassOf(:Chapter :LegalResourceSubdivision)
+
+# Class: :Collection_of_Personal_Data (DataCollectionActivity)
+
+AnnotationAssertion(:involves :Collection_of_Personal_Data :Data_Controller)
+AnnotationAssertion(:involves :Collection_of_Personal_Data :Personal_Data)
+AnnotationAssertion(rdfs:comment :Collection_of_Personal_Data "This refers to the act of gathering or acquiring Personal Data.
+
+The act of obtaining personal data from a data subject or a third party. Collection must be for a notified purpose and limited to what’s necessary.")
+AnnotationAssertion(rdfs:isDefinedBy :Collection_of_Personal_Data "Section 22")
+AnnotationAssertion(rdfs:label :Collection_of_Personal_Data "DataCollectionActivity")
+SubClassOf(:Collection_of_Personal_Data <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity>)
+
+# Class: :Consent (Consent)
+
+AnnotationAssertion(:involves :Consent :Data_Subject)
+AnnotationAssertion(:involves :Consent :Personal_Data)
+AnnotationAssertion(rdfs:comment :Consent "Based on the Personal Data Protection Act, B.E. 2562 (2019), \"consent\" is a fundamental concept for handling personal data, and several provisions outline what constitutes valid consent and the activities surrounding it."@en)
+AnnotationAssertion(rdfs:label :Consent "Consent")
+SubClassOf(:Consent <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :Consent_Activity (ConsentActivity)
+
+AnnotationAssertion(rdfs:comment :Consent_Activity "The act by which a data subject gives or withdraws consent as prescribed in Section 19 of the PDPA.")
+AnnotationAssertion(rdfs:isDefinedBy :Consent_Activity "Section19 (Part 1, General Provisions, Chapter II)")
+AnnotationAssertion(rdfs:label :Consent_Activity "ConsentActivity")
+SubClassOf(:Consent_Activity :Activity)
+
+# Class: :Controller_Obligation (ControllerObligations)
+
+AnnotationAssertion(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#definition> :Controller_Obligation "A duty imposed by the Personal Data Protection Act on an actor.
+
+“Section 37 The Data Controller shall have the following duties: (1) provide appropriate security measures… (4) notify the Office of any Personal Data breach…”")
+AnnotationAssertion(:involves :Controller_Obligation :Data_Controller)
+AnnotationAssertion(rdfs:comment :Controller_Obligation "Duties of Data Controllers:
+
+- Implement appropriate security measures to prevent loss, unauthorized access, use, alteration, correction, or disclosure of Personal Data. [Section 37]
+
+ - Prevent unlawful use or disclosure by recipients of Personal Data
+
+-  Establish systems for erasure or destruction of Personal Data when retention ends, it's no longer necessary, or upon data subject's request/withdrawal of consent (with specific exceptions for retention) [Section 24 (1) or (4) , Section 26 (5) (a) or (b), Section 33 paragraph 5]
+
+- Notify the Office of any Personal Data breach without undue delay (within 72 hours if feasible), unless unlikely to risk rights and freedoms. High-risk breaches must also be notified to data subjects
+
+- Foreign Data Controllers (as defined in section 5 paragraph two) must designate a representative in Thailand [Section 38]
+
+- Maintain records of processing activities, including collected data, purposes, retention, and security measures [Section 39]"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Controller_Obligation "Section 37")
+AnnotationAssertion(rdfs:label :Controller_Obligation "ControllerObligations")
+SubClassOf(:Controller_Obligation :Obligation)
+
+# Class: :Criminal_Records (Criminal Records)
+
+AnnotationAssertion(:involves :Criminal_Records :Data_Subject)
+AnnotationAssertion(rdfs:label :Criminal_Records "Criminal Records")
+SubClassOf(:Criminal_Records :Sensitive_Personal_Data)
+
+# Class: :Cross-border_Transfer (CrossBorderTransfer)
+
+AnnotationAssertion(rdfs:comment :Cross-border_Transfer "Sending/Transferring to a foreign country or international organization.")
+AnnotationAssertion(rdfs:label :Cross-border_Transfer "CrossBorderTransfer")
+SubClassOf(:Cross-border_Transfer <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure>)
+
+# Class: :Cult_Data (Cult Data)
+
+AnnotationAssertion(rdfs:label :Cult_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Cult_Data "Cult Data")
+SubClassOf(:Cult_Data :Sensitive_Personal_Data)
+
+# Class: :DPO_Obligation (DataProtectionOfficerObligations)
+
+AnnotationAssertion(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#definition> :DPO_Obligation "Section 42 The data protection officer shall have the following duties: (1) give advice… (4) keep confidentiality of Personal Data…")
+AnnotationAssertion(:involves :DPO_Obligation :Data_Protection_Officer_DPO)
+AnnotationAssertion(rdfs:comment :DPO_Obligation "Advice & Guidance: Give advice to the Data Controller or Data Processor (and their employees or service-providers) on complying with the PDPA. thailand-personal-data-…
+
+Monitoring & Investigation: Investigate how the Data Controller or Data Processor (and their employees or service-providers) collect, use, or disclose personal data to ensure PDPA compliance. thailand-personal-data-…
+
+Coordination with the PDPC: Coordinate and cooperate with the Personal Data Protection Office whenever problems arise in personal-data processing under the PDPA. thailand-personal-data-…
+
+Confidentiality: Maintain the confidentiality of any personal data accessed in the course of duty.")
+AnnotationAssertion(rdfs:isDefinedBy :DPO_Obligation "Chapter IV, Section 42")
+AnnotationAssertion(rdfs:isDefinedBy :DPO_Obligation "Section 42")
+AnnotationAssertion(rdfs:label :DPO_Obligation "DataProtectionOfficerObligations")
+SubClassOf(:DPO_Obligation :Obligation)
+
+# Class: :Data (Data)
+
+AnnotationAssertion(rdfs:comment :Data "Any information in any form, including both personal and non-personal data.")
+AnnotationAssertion(rdfs:label :Data "Data")
+SubClassOf(:Data <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :DataRecordkeepingActivity (DataRecordkeepingActivity)
+
+AnnotationAssertion(:involves :DataRecordkeepingActivity :Data_Controller)
+AnnotationAssertion(:involves :DataRecordkeepingActivity :Personal_Data)
+AnnotationAssertion(rdfs:comment :DataRecordkeepingActivity "Documenting all personal data processing activities, including categories of data, purposes, retention, and security measures.")
+AnnotationAssertion(rdfs:isDefinedBy :DataRecordkeepingActivity "Section39")
+AnnotationAssertion(rdfs:label :DataRecordkeepingActivity "DataRecordkeepingActivity")
+SubClassOf(:DataRecordkeepingActivity :Data_Activity)
+
+# Class: :Data_Activity (DataActivity)
+
+AnnotationAssertion(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#rendered> :Data_Activity "Personal Data Processing Activity")
+AnnotationAssertion(rdfs:comment :Data_Activity "Generic class for any operation on personal data.")
+AnnotationAssertion(rdfs:isDefinedBy :Data_Activity "Chapter II (part II - IV)")
+AnnotationAssertion(rdfs:label :Data_Activity "DataActivity")
+SubClassOf(:Data_Activity :Activity)
+
+# Class: :Data_Controller (DataController)
+
+AnnotationAssertion(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#definition> :Data_Controller "“A Person or a juristic person having the power and duties to make decisions regarding the collection, use, or disclosure of the Personal Data.”")
+AnnotationAssertion(rdfs:comment :Data_Controller "\"Data Controller\" refers to a Person or juristic person with the power and duties to make decisions regarding the collection, use, or disclosure of Personal Data."@en)
+AnnotationAssertion(rdfs:isDefinedBy :Data_Controller "Section 6")
+AnnotationAssertion(rdfs:label :Data_Controller "DataController")
+SubClassOf(:Data_Controller :Entity)
+
+# Class: :Data_Processor (DataProcessor)
+
+AnnotationAssertion(rdfs:comment :Data_Processor "\"Data Processor\" is a Person or juristic person who operates in relation to the collection, use, or disclosure of Personal Data pursuant to the orders given by or on behalf of a Data Controller, and is not the Data Controller themselves."@en)
+AnnotationAssertion(rdfs:isDefinedBy :Data_Processor "Section 6")
+AnnotationAssertion(rdfs:label :Data_Processor "DataProcessor")
+SubClassOf(:Data_Processor :Entity)
+
+# Class: :Data_Protection_Officer_DPO (DataProtectionOfficer)
+
+AnnotationAssertion(rdfs:comment :Data_Protection_Officer_DPO "Duties of Data Protection Officer (DPO)
+- Required for public authorities, organizations with large-scale regular monitoring of Personal Data, or those whose core activity involves processing sensitive Personal Data.
+- Duties include: advising the Data Controller/Processor and employees on compliance, investigating performance, coordinating with the Office, and maintaining confidentiality.
+- Data Controllers and Data Processors must support the DPO's work and must not dismiss them for performing duties under the Act.
+
+[Section 41]"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Data_Protection_Officer_DPO "Section 6")
+AnnotationAssertion(rdfs:label :Data_Protection_Officer_DPO "DataProtectionOfficer")
+SubClassOf(:Data_Protection_Officer_DPO :Entity)
+
+# Class: :Data_Subject (DataSubject)
+
+AnnotationAssertion(rdfs:comment :Data_Subject "An individual or entity to whom their personal data relates."@en)
+AnnotationAssertion(rdfs:isDefinedBy :Data_Subject "Section 6")
+AnnotationAssertion(rdfs:label :Data_Subject "DataSubject")
+SubClassOf(:Data_Subject :Entity)
+
+# Class: :Data_Subject_Rights (DataSubjectRights)
+
+AnnotationAssertion(:involves :Data_Subject_Rights :Data_Subject)
+AnnotationAssertion(rdfs:comment :Data_Subject_Rights "PDPA provides several rights to the data subjects.
+
+[Chapter III]"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Data_Subject_Rights "ChapterIII")
+AnnotationAssertion(rdfs:label :Data_Subject_Rights "DataSubjectRights")
+SubClassOf(:Data_Subject_Rights <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :Disability_Data (Disability Data)
+
+AnnotationAssertion(rdfs:label :Disability_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Disability_Data "Disability Data")
+SubClassOf(:Disability_Data :Sensitive_Personal_Data)
+
+# Class: :Entity (Entity)
+
+AnnotationAssertion(rdfs:isDefinedBy :Entity "Section 6")
+AnnotationAssertion(rdfs:label :Entity "Entity")
+SubClassOf(:Entity <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :Erase_Data (RetentionandErasure)
+
+AnnotationAssertion(:involves :Erase_Data :Data_Controller)
+AnnotationAssertion(:involves :Erase_Data :Personal_Data)
+AnnotationAssertion(rdfs:comment :Erase_Data "Erasing, destroying or anonymising personal data when no longer needed or upon request.")
+AnnotationAssertion(rdfs:isDefinedBy :Erase_Data "Section 33")
+AnnotationAssertion(rdfs:label :Erase_Data "RetentionandErasure")
+SubClassOf(:Erase_Data :Data_Activity)
+
+# Class: :Ethnic_Origin_Data (Ethnic Origin)
+
+AnnotationAssertion(:involves :Ethnic_Origin_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Ethnic_Origin_Data "Ethnic Origin")
+SubClassOf(:Ethnic_Origin_Data :Sensitive_Personal_Data)
+
+# Class: :Genetic_Data (Genetic Data)
+
+AnnotationAssertion(:involves :Genetic_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Genetic_Data "Genetic Data")
+SubClassOf(:Genetic_Data :Sensitive_Personal_Data)
+
+# Class: :Health_Data (HealthData)
+
+AnnotationAssertion(:involves :Health_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Health_Data "HealthData")
+SubClassOf(:Health_Data :Sensitive_Personal_Data)
+
+# Class: :Insensitive_Personal_Data (General Personal Data)
+
+AnnotationAssertion(rdfs:comment :Insensitive_Personal_Data "Definition: \"Personal Data\" means any information relating to a Person, which enables the identification of such Person, whether directly or indirectly, but not including the information of the deceased Persons in particular. This serves as the broad, overarching definition for what constitutes personal data under the Act"@en)
+AnnotationAssertion(rdfs:label :Insensitive_Personal_Data "General Personal Data")
+SubClassOf(:Insensitive_Personal_Data :Personal_Data)
+
+# Class: :LegalResourceSubdivision (Legal Resource Subdivision)
+
+AnnotationAssertion(rdfs:label :LegalResourceSubdivision "Legal Resource Subdivision")
+
+# Class: :LegalResources (Legal Resources)
+
+AnnotationAssertion(rdfs:label :LegalResources "Legal Resources")
+
+# Class: :Obligation (Obligations)
+
+AnnotationAssertion(rdfs:comment :Obligation "A duty imposed by the Personal Data Protection Act on an actor.")
+AnnotationAssertion(rdfs:label :Obligation "Obligations")
+SubClassOf(:Obligation <http://www.w3.org/2004/02/skos/core#Concept>)
+
+# Class: :Obtaining_Consent_from_Data_Subject (Grant Consent)
+
+AnnotationAssertion(:involves :Obtaining_Consent_from_Data_Subject :Consent)
+AnnotationAssertion(:involves :Obtaining_Consent_from_Data_Subject :Data_Subject)
+AnnotationAssertion(rdfs:comment :Obtaining_Consent_from_Data_Subject "The act of getting consent from Data Subject")
+AnnotationAssertion(rdfs:label :Obtaining_Consent_from_Data_Subject "Grant Consent")
+SubClassOf(:Obtaining_Consent_from_Data_Subject :Consent_Activity)
+
+# Class: :Part (Part)
+
+AnnotationAssertion(rdfs:comment :Part "Part in PDPA Thailand")
+AnnotationAssertion(rdfs:isDefinedBy :Part <https://pdpathailand.com/>)
+AnnotationAssertion(rdfs:label :Part "Part")
+SubClassOf(:Part :LegalResourceSubdivision)
+
+# Class: :Personal_Data (PersonalData)
+
+AnnotationAssertion(:involves :Personal_Data :Data_Subject)
+AnnotationAssertion(rdfs:comment :Personal_Data "“Personal Data” means any information relating to a Person, which enables the identification of such Person, whether directly or indirectly, but not including the information of the deceased Persons in particular;")
+AnnotationAssertion(rdfs:isDefinedBy :Personal_Data "PDPA 
+Chapter 1, Section 6")
+AnnotationAssertion(rdfs:label :Personal_Data "PersonalData")
+SubClassOf(:Personal_Data :Data)
+
+# Class: :Political_Opinions_Data (Political Opinions)
+
+AnnotationAssertion(:involves :Political_Opinions_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Political_Opinions_Data "Political Opinions")
+SubClassOf(:Political_Opinions_Data :Sensitive_Personal_Data)
+
+# Class: :Processing (DataSecurityAndBreachNotificationActivity)
+
+AnnotationAssertion(:involves :Processing :Data_Controller)
+AnnotationAssertion(:involves :Processing :Personal_Data)
+AnnotationAssertion(rdfs:comment :Processing "Implementing measures to protect data and notifying the PDPC and data subjects of any breaches.")
+AnnotationAssertion(rdfs:isDefinedBy :Processing "Section 37")
+AnnotationAssertion(rdfs:label :Processing "DataSecurityAndBreachNotificationActivity")
+SubClassOf(:Processing :Data_Activity)
+
+# Class: :Processor_Obligation (ProcessorObligations)
+
+AnnotationAssertion(<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#definition> :Processor_Obligation "“Section 40 The Personal Data Processor shall have the following duties: (1) carry out activities only pursuant to instructions… (3) prepare and maintain records…”")
+AnnotationAssertion(:involves :Processor_Obligation :Data_Processor)
+AnnotationAssertion(rdfs:comment :Processor_Obligation "Duties of Data Processors: [Section 40]
+- Process Personal Data only according to the Data Controller's instructions, unless instructions are unlawful. If a Data Processor fails to comply, they may be regarded as a Data Controller for that activity.
+- Implement appropriate security measures and notify the Data Controller of breaches.
+- Maintain records of processing activities.
+- An agreement between Data Controller and Data Processor is required to ensure compliance."@en)
+AnnotationAssertion(rdfs:isDefinedBy :Processor_Obligation "Section 40")
+AnnotationAssertion(rdfs:label :Processor_Obligation "ProcessorObligations")
+SubClassOf(:Processor_Obligation :Obligation)
+
+# Class: :Racial_Data (Racial)
+
+AnnotationAssertion(:involves :Racial_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Racial_Data "Racial")
+SubClassOf(:Racial_Data :Sensitive_Personal_Data)
+
+# Class: :Rectify_Data (Rectification)
+
+AnnotationAssertion(:involves :Rectify_Data :Data_Controller)
+AnnotationAssertion(:involves :Rectify_Data :Personal_Data)
+AnnotationAssertion(rdfs:comment :Rectify_Data "Correcting personal data at the request of the data subject.")
+AnnotationAssertion(rdfs:isDefinedBy :Rectify_Data "Section36")
+AnnotationAssertion(rdfs:label :Rectify_Data "Rectification")
+SubClassOf(:Rectify_Data :Data_Activity)
+
+# Class: :Religious_or_Philosophical_Beliefs (Religious or Philosophical Beliefs)
+
+AnnotationAssertion(:involves :Religious_or_Philosophical_Beliefs :Data_Subject)
+AnnotationAssertion(rdfs:label :Religious_or_Philosophical_Beliefs "Religious or Philosophical Beliefs")
+SubClassOf(:Religious_or_Philosophical_Beliefs :Sensitive_Personal_Data)
+
+# Class: :RightOfAccess (Right of Access)
+
+AnnotationAssertion(:involves :RightOfAccess <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataAccess>)
+AnnotationAssertion(:involves :RightOfAccess :Data_Subject)
+AnnotationAssertion(rdfs:comment :RightOfAccess "To request access to and obtain a copy of their Personal Data and to request disclosure of the acquisition of Personal Data obtained without their consent.
+
+[Chapter III, Section 30]"@en)
+AnnotationAssertion(rdfs:isDefinedBy :RightOfAccess "[Chapter III, Section 30]")
+AnnotationAssertion(rdfs:label :RightOfAccess "Right of Access")
+SubClassOf(:RightOfAccess :Data_Subject_Rights)
+
+# Class: :Right_of_Data_Portability (Right to Data Portability)
+
+AnnotationAssertion(:involves :Right_of_Data_Portability :Data_Subject)
+AnnotationAssertion(rdfs:comment :Right_of_Data_Portability "To receive their Personal Data in a readable and transferable format and to request its transfer to other Data Controllers"@en)
+AnnotationAssertion(rdfs:label :Right_of_Data_Portability "Right to Data Portability")
+SubClassOf(:Right_of_Data_Portability :Data_Subject_Rights)
+
+# Class: :Right_to_Erasure_or_Destruction (Right to  Erasure or Destruction)
+
+AnnotationAssertion(:involves :Right_to_Erasure_or_Destruction :Data_Subject)
+AnnotationAssertion(rdfs:comment :Right_to_Erasure_or_Destruction "To request the erasure, destruction, or anonymization of their Personal Data if it's no longer necessary, consent is withdrawn without other legal grounds, objection rights are exercised, or data was unlawfully processed."@en)
+AnnotationAssertion(rdfs:isDefinedBy :Right_to_Erasure_or_Destruction "Section 33")
+AnnotationAssertion(rdfs:label :Right_to_Erasure_or_Destruction "Right to  Erasure or Destruction")
+SubClassOf(:Right_to_Erasure_or_Destruction :Data_Subject_Rights)
+
+# Class: :Right_to_Object_Processing (Right to Object)
+
+AnnotationAssertion(:involves :Right_to_Object_Processing <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataObjectionActivity>)
+AnnotationAssertion(:involves :Right_to_Object_Processing :Data_Subject)
+AnnotationAssertion(rdfs:comment :Right_to_Object_Processing "To object to the collection, use, or disclosure of their Personal Data in specific circumstances, such as for direct marketing, or when collected under certain exemptions unless compelling legitimate grounds exist"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Right_to_Object_Processing "Section 32")
+AnnotationAssertion(rdfs:label :Right_to_Object_Processing "Right to Object")
+SubClassOf(:Right_to_Object_Processing :Data_Subject_Rights)
+
+# Class: :Right_to_Rectification (Right to Rectification)
+
+AnnotationAssertion(:involves :Right_to_Rectification :Data_Subject)
+AnnotationAssertion(:involves :Right_to_Rectification :Rectify_Data)
+AnnotationAssertion(rdfs:comment :Right_to_Rectification "To request the Data Controller to ensure their Personal Data remains accurate, up-to-date, complete, and not misleading"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Right_to_Rectification "Section 32 Paragraph 3")
+AnnotationAssertion(rdfs:label :Right_to_Rectification "Right to Rectification")
+SubClassOf(:Right_to_Rectification :Data_Subject_Rights)
+
+# Class: :Right_to_Restriction_of_Use (Right to Restriction of Use)
+
+AnnotationAssertion(:involves :Right_to_Restriction_of_Use <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RestrictionOfUse>)
+AnnotationAssertion(:involves :Right_to_Restriction_of_Use :Data_Subject)
+AnnotationAssertion(rdfs:comment :Right_to_Restriction_of_Use "To request the restriction of the use of their Personal Data under certain conditions, for example, while data accuracy is being verified or if the data needs to be retained for legal claims"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Right_to_Restriction_of_Use "Section 36")
+AnnotationAssertion(rdfs:label :Right_to_Restriction_of_Use "Right to Restriction of Use")
+SubClassOf(:Right_to_Restriction_of_Use :Data_Subject_Rights)
+
+# Class: :Section (Section)
+
+AnnotationAssertion(rdfs:comment :Section "Section in PDPA (Chapter > Section or Chapter > Part > Section)")
+AnnotationAssertion(rdfs:isDefinedBy :Section <https://pdpathailand.com/>)
+AnnotationAssertion(rdfs:label :Section "Section")
+SubClassOf(:Section :LegalResourceSubdivision)
+
+# Class: :Sensitive_Personal_Data (Sensitive Personal Data)
+
+AnnotationAssertion(:involves :Sensitive_Personal_Data :Data_Subject)
+AnnotationAssertion(rdfs:comment :Sensitive_Personal_Data "Sensitive Personal Data (requiring explicit consent and subject to stricter prohibitions)
+The collection of this specific kind of personal data is generally prohibited without explicit consent from the data subject, except under certain specified circumstances
+This category includes data pertaining to:
+        ▪ Racial or ethnic origin
+        ▪ Political opinions
+        ▪ Cult, religious or philosophical beliefs
+        ▪ Sexual behavior
+        ▪ Criminal records
+        ▪ Health data
+        ▪ Disability
+        ▪ Trade union information
+        ▪ Genetic data
+        ▪ Biometric data"@en)
+AnnotationAssertion(rdfs:isDefinedBy :Sensitive_Personal_Data "Section 26")
+AnnotationAssertion(rdfs:label :Sensitive_Personal_Data "Sensitive Personal Data")
+SubClassOf(:Sensitive_Personal_Data :Personal_Data)
+
+# Class: :Sexual_Behavior_Data (Sexual Behavior)
+
+AnnotationAssertion(:involves :Sexual_Behavior_Data :Data_Subject)
+AnnotationAssertion(rdfs:label :Sexual_Behavior_Data "Sexual Behavior")
+SubClassOf(:Sexual_Behavior_Data :Sensitive_Personal_Data)
+
+# Class: :Share_Personal_Data_with_Third_Party (Share with third party or another domestic party)
+
+AnnotationAssertion(rdfs:label :Share_Personal_Data_with_Third_Party "Share with third party or another domestic party")
+SubClassOf(:Share_Personal_Data_with_Third_Party <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disclosure>)
+
+# Class: :Trade_Union_Information (Trade Union Information)
+
+AnnotationAssertion(:involves :Trade_Union_Information :Data_Subject)
+AnnotationAssertion(rdfs:label :Trade_Union_Information "Trade Union Information")
+SubClassOf(:Trade_Union_Information :Sensitive_Personal_Data)
+
+# Class: :Use_Data (DataUseActivity)
+
+AnnotationAssertion(:involves :Use_Data :Data_Controller)
+AnnotationAssertion(:involves :Use_Data :Personal_Data)
+AnnotationAssertion(rdfs:comment :Use_Data "Any operation whereby the controller applies, handles, or otherwise utilises personal data for the purposes notified.")
+AnnotationAssertion(rdfs:isDefinedBy :Use_Data "Section 27")
+AnnotationAssertion(rdfs:label :Use_Data "DataUseActivity")
+SubClassOf(:Use_Data <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessingActivity>)
+
+# Class: :Withdrawing_Given_Consent (Withdraw Consent Activity)
+
+AnnotationAssertion(:involves :Withdrawing_Given_Consent :Consent)
+AnnotationAssertion(:involves :Withdrawing_Given_Consent :Data_Subject)
+AnnotationAssertion(rdfs:label :Withdrawing_Given_Consent "The act by which a data subject withdraws previously given consent (Section 19).")
+AnnotationAssertion(rdfs:label :Withdrawing_Given_Consent "Withdraw Consent Activity")
+SubClassOf(:Withdrawing_Given_Consent :Consent_Activity)
+
+# Class: <http://www.w3.org/2004/02/skos/core#Concept> (skos:concept)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#Concept> "skos:concept")
+
+
+)

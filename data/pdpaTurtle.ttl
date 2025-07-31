@@ -6,57 +6,59 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/> .
 
-<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33> rdf:type owl:Ontology .
+<http://www.semanticweb.org/kyith/ontologies/2025/6/pdpaThailand> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/involves
+:involves rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#has_Article
-:has_Article rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :has_part ;
-             rdfs:domain :LegalResourceSubdivision ;
-             rdfs:range :Article ;
-             rdfs:comment "indicates the legal resource has the Article" ;
-             rdfs:label "has_Article" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#has_Chapter
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Chapter
 :has_Chapter rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :has_part ;
+             owl:inverseOf :is_part_of_Chapter ;
              rdfs:domain :LegalResourceSubdivision ;
              rdfs:range :Chapter ;
              rdfs:comment "indicates the legal resource has the Chapter" ;
              rdfs:label "has Chapter" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#has_Part
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Part
 :has_Part rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :has_part ;
+          owl:inverseOf :is_part_of_Part ;
           rdfs:domain :LegalResourceSubdivision ;
           rdfs:range :Part ;
           rdfs:comment "indicates the legal resource has the Part under some Chapters" ;
           rdfs:label "has Part" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#has_Section
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Section
 :has_Section rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :has_part ;
+             owl:inverseOf :is_part_of_Section ;
              rdfs:domain :LegalResourceSubdivision ;
              rdfs:range :Section ;
              rdfs:comment "indicates the legal resource has the Section under Chapter or Part" ;
              rdfs:label "has Section" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#has_part
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_part
 :has_part rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#is_part_of
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/is_part_of
 :is_part_of rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#is_part_of_Chapter
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/is_part_of_Chapter
 :is_part_of_Chapter rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :is_part_of ;
                     rdfs:domain :LegalResourceSubdivision ;
@@ -65,7 +67,7 @@
                     rdfs:label "is part of Chapter" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#is_part_of_Part
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/is_part_of_Part
 :is_part_of_Part rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :is_part_of ;
                  rdfs:domain :LegalResourceSubdivision ;
@@ -74,7 +76,7 @@
                  rdfs:label "is part of Part" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#is_part_of_Section
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/is_part_of_Section
 :is_part_of_Section rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :is_part_of ;
                     rdfs:domain :LegalResourceSubdivision ;
@@ -87,312 +89,346 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Archive_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+          rdfs:comment "An Activity signifies some process(es) or step(s) towards specific deed(s), action(s) function(s) or sphere(s) of action." ;
+          rdfs:label "Activity" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Archive_Data
 :Archive_Data rdf:type owl:Class ;
               rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Article
-:Article rdf:type owl:Class ;
-         rdfs:subClassOf :LegalResourceSubdivision .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Biometric_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Biometric_Data
 :Biometric_Data rdf:type owl:Class ;
                 rdfs:subClassOf :Sensitive_Personal_Data ;
+                :involves :Data_Subject ;
                 rdfs:comment "testing >> this is biometric data" ;
                 rdfs:label "Biometric Data" .
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Chapter
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Chapter
 :Chapter rdf:type owl:Class ;
-         rdfs:subClassOf :LegalResourceSubdivision .
+         rdfs:subClassOf :LegalResourceSubdivision ;
+         rdfs:comment "Chapter in PDPA Thailand" ;
+         rdfs:label "Chapter" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Citation
-:Citation rdf:type owl:Class ;
-          rdfs:subClassOf :LegalResourceSubdivision .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Collection_of_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Collection_of_Personal_Data
 :Collection_of_Personal_Data rdf:type owl:Class ;
                              rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Consent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Consent
 :Consent rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+         :involves :Data_Subject ,
+                   :Personal_Data ;
+         rdfs:comment "Based on the Personal Data Protection Act, B.E. 2562 (2019), \"consent\" is a fundamental concept for handling personal data, and several provisions outline what constitutes valid consent and the activities surrounding it."@en ;
+         rdfs:label "Consent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Consent_Activity
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Consent_Activity
 :Consent_Activity rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+                  rdfs:subClassOf :Activity ;
+                  rdfs:comment "The act by which a data subject gives or withdraws consent as prescribed in Section 19 of the PDPA."@en ;
+                  rdfs:isDefinedBy "Section19 (Part 1, General Provisions, Chapter II)" ;
+                  rdfs:label "ConsentActivity" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Controller_Obligation
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Controller_Obligation
 :Controller_Obligation rdf:type owl:Class ;
                        rdfs:subClassOf :Obligation .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Criminal_Records
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Criminal_Records
 :Criminal_Records rdf:type owl:Class ;
-                  rdfs:subClassOf :Sensitive_Personal_Data .
+                  rdfs:subClassOf :Sensitive_Personal_Data ;
+                  :involves :Data_Subject ;
+                  rdfs:label "Criminal Records" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Cross-border_Transfer
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Cross-border_Transfer
 :Cross-border_Transfer rdf:type owl:Class ;
                        rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Cult_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Cult_Data
 :Cult_Data rdf:type owl:Class ;
-           rdfs:subClassOf :Sensitive_Personal_Data .
+           rdfs:subClassOf :Sensitive_Personal_Data ;
+           :involves :Data_Subject ;
+           rdfs:label "Cult, Religious or Philosophical Beliefs" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DPA
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DPA
 :DPA rdf:type owl:Class ;
      rdfs:subClassOf :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DPO_Obligation
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DPO_Obligation
 :DPO_Obligation rdf:type owl:Class ;
                 rdfs:subClassOf :Obligation .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data
 :Data rdf:type owl:Class ;
       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Activity
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Activity
 :Data_Activity rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+               rdfs:subClassOf :Activity ;
+               rdfs:label "DataActivity" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Controller
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Controller
 :Data_Controller rdf:type owl:Class ;
                  rdfs:subClassOf :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Processor
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Processor
 :Data_Processor rdf:type owl:Class ;
                 rdfs:subClassOf :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Protection_Officer_DPO
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Protection_Officer_DPO
 :Data_Protection_Officer_DPO rdf:type owl:Class ;
                              rdfs:subClassOf :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Subject
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Subject
 :Data_Subject rdf:type owl:Class ;
-              rdfs:subClassOf :Entity .
+              rdfs:subClassOf :Entity ;
+              rdfs:label "DataSubject" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Subject_Rights
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Subject_Rights
 :Data_Subject_Rights rdf:type owl:Class ;
                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Disability_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Disability_Data
 :Disability_Data rdf:type owl:Class ;
-                 rdfs:subClassOf :Sensitive_Personal_Data .
+                 rdfs:subClassOf :Sensitive_Personal_Data ;
+                 :involves :Data_Subject ;
+                 rdfs:label "Disability" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Entity
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Entity
 :Entity rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Erase_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Erase_Data
 :Erase_Data rdf:type owl:Class ;
             rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Ethnic_Origin_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Ethnic_Origin_Data
 :Ethnic_Origin_Data rdf:type owl:Class ;
-                    rdfs:subClassOf :Sensitive_Personal_Data .
+                    rdfs:subClassOf :Sensitive_Personal_Data ;
+                    :involves :Data_Subject ;
+                    rdfs:label "Racial or ethnic origin" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Genetic_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Genetic_Data
 :Genetic_Data rdf:type owl:Class ;
-              rdfs:subClassOf :Sensitive_Personal_Data .
+              rdfs:subClassOf :Sensitive_Personal_Data ;
+              :involves :Data_Subject ;
+              rdfs:label "Genetic data" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Health_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Health_Data
 :Health_Data rdf:type owl:Class ;
-             rdfs:subClassOf :Sensitive_Personal_Data .
+             rdfs:subClassOf :Sensitive_Personal_Data ;
+             :involves :Data_Subject ;
+             rdfs:label "Health Data" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Insensitive_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Insensitive_Personal_Data
 :Insensitive_Personal_Data rdf:type owl:Class ;
-                           rdfs:subClassOf :Personal_Data .
+                           rdfs:subClassOf :Personal_Data ;
+                           :involves :Data_Subject ;
+                           rdfs:label "General Personal Data" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LegalResourceSubdivision
-:LegalResourceSubdivision rdf:type owl:Class .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalResourceSubdivision
+:LegalResourceSubdivision rdf:type owl:Class ;
+                          rdfs:label "LegalResourceSubdivision" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LegalResources
-:LegalResources rdf:type owl:Class .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalResources
+:LegalResources rdf:type owl:Class ;
+                rdfs:label "LegalResources" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Monitor_Compliance
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Monitor_Compliance
 :Monitor_Compliance rdf:type owl:Class ;
                     rdfs:subClassOf :DPO_Obligation .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Obligation
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Obligation
 :Obligation rdf:type owl:Class ;
             rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Obtaining_Consent_from_Data_Subject
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Obtaining_Consent_from_Data_Subject
 :Obtaining_Consent_from_Data_Subject rdf:type owl:Class ;
-                                     rdfs:subClassOf :Consent_Activity .
+                                     rdfs:subClassOf :Consent_Activity ;
+                                     :involves :Consent ,
+                                               :Data_Subject ;
+                                     rdfs:comment "The act of getting consent from Data Subject" ;
+                                     rdfs:label "GrantConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Part
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Part
 :Part rdf:type owl:Class ;
-      rdfs:subClassOf :LegalResourceSubdivision .
+      rdfs:subClassOf :LegalResourceSubdivision ;
+      rdfs:comment "Part in PDPA Thailand" ;
+      rdfs:label "Part" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data
 :Personal_Data rdf:type owl:Class ;
-               rdfs:subClassOf :Data .
+               rdfs:subClassOf :Data ;
+               :involves :Data_Subject ;
+               rdfs:comment "Personal Data means any information relating to a person that enables the identification of that person, whether directly or indirectly, but specifically excludes information of deceased persons" ;
+               rdfs:label "Personal Data" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Process_for_the_Marketing_Purpose
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data_Process_for_the_Marketing_Purpose
 :Personal_Data_Process_for_the_Marketing_Purpose rdf:type owl:Class ;
                                                  rdfs:subClassOf :Right_to_Object_Processing .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_is_collected_with_the_exemption_to_consent_requirements_under_section_24_-_4_or_5
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data_is_collected_with_the_exemption_to_consent_requirements_under_section_24_-_4_or_5
 :Personal_Data_is_collected_with_the_exemption_to_consent_requirements_under_section_24_-_4_or_5 rdf:type owl:Class ;
                                                                                                  rdfs:subClassOf :Share_Personal_Data_with_Third_Party .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Point
-:Point rdf:type owl:Class ;
-       rdfs:subClassOf :LegalResourceSubdivision .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Political_Opinions_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Political_Opinions_Data
 :Political_Opinions_Data rdf:type owl:Class ;
-                         rdfs:subClassOf :Sensitive_Personal_Data .
+                         rdfs:subClassOf :Sensitive_Personal_Data ;
+                         :involves :Data_Subject ;
+                         rdfs:label "Political opinions" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Processing
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Processing
 :Processing rdf:type owl:Class ;
             rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Processor_Obligation
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Processor_Obligation
 :Processor_Obligation rdf:type owl:Class ;
                       rdfs:subClassOf :Obligation .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Provide_copy_of_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Provide_copy_of_Personal_Data
 :Provide_copy_of_Personal_Data rdf:type owl:Class ;
                                rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Racial_Data
-:Racial_Data rdf:type owl:Class ;
-             rdfs:subClassOf :Sensitive_Personal_Data .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Rectify_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Rectify_Data
 :Rectify_Data rdf:type owl:Class ;
               rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Regulation
-:Regulation rdf:type owl:Class ;
-            rdfs:subClassOf :LegalResourceSubdivision .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Religious_or_Philosophical_Beliefs
-:Religious_or_Philosophical_Beliefs rdf:type owl:Class ;
-                                    rdfs:subClassOf :Sensitive_Personal_Data .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Request_to_directly_obtain_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Request_to_directly_obtain_Personal_Data
 :Request_to_directly_obtain_Personal_Data rdf:type owl:Class ;
                                           rdfs:subClassOf :Right_to_Receive_Personal_Data .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Request_to_send_or_transfer_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Request_to_send_or_transfer_Personal_Data
 :Request_to_send_or_transfer_Personal_Data rdf:type owl:Class ;
                                            rdfs:subClassOf :Right_to_Receive_Personal_Data .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Right_of_Data_Portability
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Right_of_Data_Portability
 :Right_of_Data_Portability rdf:type owl:Class ;
                            rdfs:subClassOf :Data_Subject_Rights .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Right_to_Object_Processing
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Right_to_Object_Processing
 :Right_to_Object_Processing rdf:type owl:Class ;
                             rdfs:subClassOf :Data_Subject_Rights .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Right_to_Receive_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Right_to_Receive_Personal_Data
 :Right_to_Receive_Personal_Data rdf:type owl:Class ;
                                 rdfs:subClassOf :Data_Subject_Rights .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Right_to_Request_Access_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Right_to_Request_Access_Personal_Data
 :Right_to_Request_Access_Personal_Data rdf:type owl:Class ;
                                        rdfs:subClassOf :Data_Subject_Rights .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Section
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Section
 :Section rdf:type owl:Class ;
-         rdfs:subClassOf :LegalResourceSubdivision .
+         rdfs:subClassOf :LegalResourceSubdivision ;
+         rdfs:comment """Section in PDPA Thailand
+Directory Chapter > Part > Section""" ;
+         rdfs:label "Section" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Sensitive_Personal_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Sensitive_Personal_Data
 :Sensitive_Personal_Data rdf:type owl:Class ;
-                         rdfs:subClassOf :Personal_Data .
+                         rdfs:subClassOf :Personal_Data ;
+                         :involves :Data_Subject ;
+                         rdfs:label "Sensitive Personal Data" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Sexual_Behavior_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Sexual_Behavior_Data
 :Sexual_Behavior_Data rdf:type owl:Class ;
-                      rdfs:subClassOf :Sensitive_Personal_Data .
+                      rdfs:subClassOf :Sensitive_Personal_Data ;
+                      :involves :Data_Subject ;
+                      rdfs:label "Sexual behavior" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Share_Personal_Data_with_Third_Party
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Share_Personal_Data_with_Third_Party
 :Share_Personal_Data_with_Third_Party rdf:type owl:Class ;
                                       rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Store_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Store_Data
 :Store_Data rdf:type owl:Class ;
             rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SubPoint
-:SubPoint rdf:type owl:Class ;
-          rdfs:subClassOf :LegalResourceSubdivision .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Trade_Union_Information
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Trade_Union_Information
 :Trade_Union_Information rdf:type owl:Class ;
-                         rdfs:subClassOf :Sensitive_Personal_Data .
+                         rdfs:subClassOf :Sensitive_Personal_Data ;
+                         :involves :Data_Subject ;
+                         rdfs:label "Trade Union Information" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Use_Data
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Use_Data
 :Use_Data rdf:type owl:Class ;
           rdfs:subClassOf :Data_Activity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Withdrawing_Given_Consent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Withdrawing_Given_Consent
 :Withdrawing_Given_Consent rdf:type owl:Class ;
-                           rdfs:subClassOf :Consent_Activity .
+                           rdfs:subClassOf :Consent_Activity ;
+                           :involves :Consent ,
+                                     :Data_Subject ;
+                           rdfs:comment "The act by which a data subject withdraws previously given consent (Section 19)." ;
+                           rdfs:label "WithdrawConsentActivity" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/pdpaThailand#Chapter_I
+:Chapter_I rdf:type owl:NamedIndividual ,
+                    :Chapter .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
