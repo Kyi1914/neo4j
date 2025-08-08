@@ -10,7 +10,7 @@
         <rdfs:comment xml:lang="en">An example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://www.co-ode.org/resources/tutorials/)</rdfs:comment>
         <owl:versionInfo xml:lang="en">v.1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional</owl:versionInfo>
         <owl:versionInfo xml:lang="en">v.1.5. Removed protege.owl import and references. Made ontology URI date-independent</owl:versionInfo>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 1.5</owl:versionInfo>
+        <owl:versionInfo>version 1.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -751,6 +751,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:comment xml:lang="en">A class that is equivalent to the set of individuals that are described in the enumeration - ie Countries can only be either America, England, France, Germany or Italy and nothing else. Note that these individuals have been asserted to be allDifferent from each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
         <rdfs:label xml:lang="pt">Pais</rdfs:label>
     </owl:Class>
     
@@ -857,12 +858,7 @@
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
-                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid102"/>
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping"/>
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping"/>
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping"/>
@@ -871,15 +867,14 @@
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping"/>
         <rdfs:label xml:lang="pt">CoberturaDePeixe</rdfs:label>
     </owl:Class>
+    <owl:Restriction rdf:nodeID="genid102">
+        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
+        <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild"/>
+    </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
-                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
+        <owl:annotatedTarget rdf:nodeID="genid102"/>
         <rdfs:comment>this is a comment</rdfs:comment>
     </owl:Axiom>
     
@@ -2744,7 +2739,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.</rdfs:comment>
+        <rdfs:comment>An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.</rdfs:comment>
         <rdfs:label xml:lang="pt">PizzaAberta</rdfs:label>
     </owl:Class>
     
@@ -2753,7 +2748,7 @@
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.</rdfs:comment>
+        <rdfs:comment>A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.</rdfs:comment>
         <rdfs:label xml:lang="pt">ValorDaParticao</rdfs:label>
     </owl:Class>
     
@@ -3047,5 +3042,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

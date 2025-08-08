@@ -1,0 +1,144 @@
+@prefix : <http://example.org/pizza#> .
+@prefix pizza: <http://example.org/pizza#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ontology header
+#################################################################
+<> a owl:Ontology ;
+   rdfs:label "Pizza Ontology (with individuals and relationships)" ;
+   rdfs:comment "Minimal pizza ontology with individuals using object properties for Neo4j n10s demos." .
+
+#################################################################
+# Classes
+#################################################################
+:Pizza a owl:Class ; rdfs:label "Pizza" .
+:PizzaBase a owl:Class ; rdfs:label "PizzaBase" .
+:PizzaTopping a owl:Class ; rdfs:label "PizzaTopping" .
+:CheeseTopping a owl:Class ; rdfs:subClassOf :PizzaTopping ; rdfs:label "CheeseTopping" .
+:VegetableTopping a owl:Class ; rdfs:subClassOf :PizzaTopping ; rdfs:label "VegetableTopping" .
+:MeatTopping a owl:Class ; rdfs:subClassOf :PizzaTopping ; rdfs:label "MeatTopping" .
+:Country a owl:Class ; rdfs:label "Country" .
+
+#################################################################
+# Object properties
+#################################################################
+:hasTopping a owl:ObjectProperty ;
+  rdfs:domain :Pizza ;
+  rdfs:range :PizzaTopping ;
+  rdfs:label "hasTopping" ;
+  rdfs:comment "Relates a pizza to one or more toppings." .
+
+:hasBase a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Pizza ;
+  rdfs:range :PizzaBase ;
+  rdfs:label "hasBase" ;
+  rdfs:comment "Each pizza has exactly one base (modeled functional here)." .
+
+:hasCountryOfOrigin a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Pizza ;
+  rdfs:range :Country ;
+  rdfs:label "hasCountryOfOrigin" ;
+  rdfs:comment "Country of origin for a pizza." .
+
+#################################################################
+# Datatype properties
+#################################################################
+:hasSpiciness a owl:DatatypeProperty ;
+  rdfs:domain :PizzaTopping ;
+  rdfs:range xsd:string ;
+  rdfs:label "hasSpiciness" .
+
+:hasCalories a owl:DatatypeProperty ;
+  rdfs:domain :Pizza ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hasCalories" .
+
+#################################################################
+# Individuals: Countries
+#################################################################
+:Italy a :Country ; rdfs:label "Italy" .
+:USA a :Country ; rdfs:label "USA" .
+
+#################################################################
+# Individuals: Bases
+#################################################################
+:ThinAndCrispyBase a :PizzaBase ; rdfs:label "ThinAndCrispyBase" .
+:DeepPanBase a :PizzaBase ; rdfs:label "DeepPanBase" .
+
+#################################################################
+# Individuals: Toppings (with datatypes)
+#################################################################
+:MozzarellaTopping a :CheeseTopping ;
+  rdfs:label "MozzarellaTopping" ;
+  :hasSpiciness "mild" .
+
+:GorgonzolaTopping a :CheeseTopping ;
+  rdfs:label "GorgonzolaTopping" ;
+  :hasSpiciness "mild" .
+
+:ParmesanTopping a :CheeseTopping ;
+  rdfs:label "ParmesanTopping" ;
+  :hasSpiciness "mild" .
+
+:FontinaTopping a :CheeseTopping ;
+  rdfs:label "FontinaTopping" ;
+  :hasSpiciness "mild" .
+
+:TomatoTopping a :VegetableTopping ;
+  rdfs:label "TomatoTopping" ;
+  :hasSpiciness "mild" .
+
+:MushroomTopping a :VegetableTopping ;
+  rdfs:label "MushroomTopping" ;
+  :hasSpiciness "mild" .
+
+:OnionTopping a :VegetableTopping ;
+  rdfs:label "OnionTopping" ;
+  :hasSpiciness "mild" .
+
+:MixedPeppersTopping a :VegetableTopping ;
+  rdfs:label "MixedPeppersTopping" ;
+  :hasSpiciness "mild" .
+
+:PepperoniTopping a :MeatTopping ;
+  rdfs:label "PepperoniTopping" ;
+  :hasSpiciness "medium" .
+
+:JalapenoPepperTopping a :VegetableTopping ;
+  rdfs:label "JalapenoPepperTopping" ;
+  :hasSpiciness "hot" .
+
+#################################################################
+# Individuals: Pizzas (using object properties)
+#################################################################
+:Margherita a :Pizza ;
+  rdfs:label "Margherita" ;
+  :hasBase :ThinAndCrispyBase ;
+  :hasTopping :TomatoTopping, :MozzarellaTopping ;
+  :hasCountryOfOrigin :Italy ;
+  :hasCalories 780 .
+
+:AmericanHot a :Pizza ;
+  rdfs:label "AmericanHot" ;
+  :hasBase :DeepPanBase ;
+  :hasTopping :PepperoniTopping, :JalapenoPepperTopping ;
+  :hasCountryOfOrigin :USA ;
+  :hasCalories 980 .
+
+:QuattroFormaggi a :Pizza ;
+  rdfs:label "QuattroFormaggi" ;
+  :hasBase :ThinAndCrispyBase ;
+  :hasTopping :MozzarellaTopping, :GorgonzolaTopping, :ParmesanTopping, :FontinaTopping ;
+  :hasCountryOfOrigin :Italy ;
+  :hasCalories 920 .
+
+:VegetarianDelight a :Pizza ;
+  rdfs:label "VegetarianDelight" ;
+  :hasBase :ThinAndCrispyBase ;
+  :hasTopping :TomatoTopping, :MushroomTopping, :OnionTopping, :MixedPeppersTopping ;
+  :hasCountryOfOrigin :Italy ;
+  :hasCalories 810 .
