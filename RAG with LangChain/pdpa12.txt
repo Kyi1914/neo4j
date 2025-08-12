@@ -1,0 +1,124 @@
+[Official Emblem of Royal Command]
+Personal Data Protection Act,
+B.E. 2562 (2019)
+----------
+His Majesty King Phra Poramenthra Ramathibodi Sisin Maha Vajiralongkorn Phra Vajira Klao Chao Yu Hua
+Given on the 24th Day of May B.E. 2562;
+Being the 4th Year of the Present Reign.
+His Majesty King Phra Poramenthra Ramathibodi Sisin Maha Vajiralongkorn Phra Vajira Klao Chao Yu Hua is graciously pleased to proclaim that:
+Whereas it is expedient to have an enabling act on the law concerning personal data protection.
+This Act contains certain provisions in relation to the restriction of rights and freedom of a person, which section 26, in conjunction with section 32, section 33 and section 37 of the Constitution of the Kingdom of Thailand so permit by virtue of the law.
+The rationale and necessity to restrict the rights and freedom of a person in accordance with this Act are to efficiently protect personal data and put in place effective remedial measures for data subjects whose rights to the protection of personal data are violated. The enactment of this Act is consistent with the criteria prescribed under section 26 of the Constitution of the Kingdom of Thailand.
+Be it, therefore, enacted by the King, by and with the advice and consent of the National Legislative Assembly acting as the parliament, as follows:
+Section 1 This Act is called the "Personal Data Protection Act, B.E. 2562 (2019)"
+Section 2 This Act shall come into force on the day following the date of its publication in the Government Gazette, except for the provisions of Chapter II, Chapter III, Chapter V, Chapter VI, Chapter VII, and section 95, and section 96, which shall come into effect after the lapse of a period of one year from the date of its publication in the Government Gazette.
+Section 3 In the event that there is any sector-specific law governing the protection of Personal Data in any manner, any business or any entity, the provisions of such law shall apply, except:
+(1) for the provisions with respect to the collection, use, or disclosure of Personal Data and the provisions with respect to the rights of data subjects including relevant penalties, the provisions of this Act shall apply additionally, regardless of whether they are repetitious with the above specific law;
+
+page 1
+
+(2) for the provisions with respect to complaints, provisions granting power to the expert committee to issue an order to protect the data subject, and provisions with respect to the power and duties of the Competent Official, including relevant penalties, the provisions of this Act shall apply in the following circumstances:
+(a) in the event that such law has no provision with respect to complaints;
+(b) in the event that such law has the provisions giving the power to the competent official, who has the power to consider the complaints under such law, to issue an order to protect the data subject, but such power is not equal to the power of the expert committee under this Act; and either the competent official who has power under such law makes a request to the expert committee, or data subject files a complaint with the expert committee under this Act, as the case may be.
+Section 4 This Act shall not apply to:
+(1) the collection, use, or disclosure of Personal Data by a Person who collects such Personal Data for personal benefit or household activity of such Person only;
+(2) operations of public authorities having the duties to maintain state security, including financial security of the state or public safety, including the duties with respect to the prevention and suppression of money laundering, forensic science or cybersecurity;
+(3) a Person or a juristic person who uses or discloses Personal Data that is collected only for the activities of mass media, fine arts, or literature, which are only in accordance with professional ethics or for public interest;
+(4) The House of Representatives, the Senate, and the Parliament, including the committee appointed by the House of Representatives, the Senate, or the Parliament, which collect, use or disclose Personal Data in their consideration under the duties and power of the House of Representatives, the Senate, the Parliament or their committee, as the case may be;
+(5) trial and adjudication of courts and work operations of officers in legal proceedings, legal execution, and deposit of property, including work operations in accordance with the criminal justice procedure;
+(6) operations of data undertaken by a credit bureau company and its members, according to the law governing the operations of a credit bureau business.
+The exceptions to apply all or parts of the provisions of this Act to any Data Controller in any manner, business or entity, in a similar manner to the Data Controller in paragraph one, or for any other public interest purpose, shall be promulgated in the form of the Royal Decree.
+The Data Controller under paragraph one (2), (3), (4), (5), and (6) and the Data Controller of the entities that are exempted under the Royal Decree in accordance with paragraph two shall also put in place a security protection of Personal Data in accordance with the standard.
+Section 5 This Act applies to the collection, use, or disclosure of Personal Data by a Data Controller or a Data Processor that is in the Kingdom of Thailand,
+
+page 2
+
+
+regardless of whether such collection, use, or disclosure takes place in the Kingdom of Thailand or not.
+In the event that a Data Controller or a Data Processor is outside the Kingdom of Thailand, this Act shall apply to the collection, use, or disclosure of Personal Data of data subjects who are in the Kingdom of Thailand, where the activities of such Data Controller or Data Processor are the following activities:
+(1) the offering of goods or services to the data subjects who are in the Kingdom of Thailand, irrespective of whether the payment is made by the data subject;
+(2) the monitoring of the data subject’s behavior, where the behavior takes place in the Kingdom of Thailand.
+Section 6 In this Act,
+“Personal Data” means any information relating to a Person, which enables the identification of such Person, whether directly or indirectly, but not including the information of the deceased Persons in particular;
+“Data Controller” means a Person or a juristic person having the power and duties to make decisions regarding the collection, use, or disclosure of the Personal Data;
+“Data Processor” means a Person or a juristic person who operates in relation to the collection, use, or disclosure of the Personal Data pursuant to the orders given by or on behalf of a Data Controller, whereby such Person or juristic person is not the Data Controller;
+“Person” means a natural person;
+“Committee” means the Personal Data Protection Committee;
+“Competent Official” means any person appointed by the Minister to perform acts under this Act;
+“Office” means the Office of the Personal Data Protection Committee;
+“Secretary-General” means the Secretary-General of the Personal Data Protection Committee;
+“Minister” means the Minister who is in charge under this Act.
+Section 7 The Minister of Digital Economy and Society shall be in charge under this Act, and shall have the power to appoint the Competent Official to perform acts under this Act.
+Chapter I
+Personal Data Protection Committee
+---------------------------
+Section 8 There shall be a Personal Data Protection Committee, consisting of:
+(1) a Chairperson who is selected and appointed from persons having distinguished knowledge, skills, and experience in the field of Personal Data protection, consumer protection, information technology and communication, social science, law, health, finance, or any other field that must be relevant to, and useful for the protection of Personal
+
+page 3
+
+Data;
+(2) the Permanent Secretary of the Ministry of Digital Economy and Society, shall be a Vice-Chairperson;
+(3) directors by position as five members consisting of the Permanent Secretary of the Prime Minister Office, the Secretary-General of the Council of State, the Secretary-General of the Consumer Protection Board, the Director-General of the Rights and Liberties Protection Department, and the Attorney General;
+(4) honorary directors as nine members, selected and appointed from the persons having distinguished knowledge, skills, and experience in the field of Personal Data protection, consumer protection, information technology and communication, social science, law, health, finance, or any other field that must be relevant to, and useful for the protection of Personal Data.
+The Secretary-General shall be a director and secretary, and the Secretary-General shall appoint assistant secretaries from the officials of the Office not exceeding two persons.
+The rules and procedures on the selection of persons to be appointed as the Chairperson and honorary directors, including the selection of the Chairperson and honorary director to replace the Chairperson and the honorary director who vacates office before the expiration of the term under section 13, shall be as prescribed by the notification issued by the Cabinet by taking into account the transparency and fairness in the selection.
+Section 9 There shall be a selection committee of eight members having the duty to select the appropriate persons who should be appointed as the Chairperson in section 8(1) or the honorary director in section 8 (4), consisting of:
+(1) two persons appointed by the Prime Minister;
+(2) two persons appointed by the President of the Parliament;
+(3) two persons appointed by the Ombudsman;
+(4) two persons appointed by the National Human Rights Commission.
+In the event that the person having the appointment power in (2), (3), or (4) is unable to appoint members of the selection committee in his part within forty- five days from the date of notice from the Office, the Office shall nominate the persons to the Prime Minister to consider and appoint the appropriate persons to be the selection committee on behalf of such person having the appointment power.
+The selection committee shall select one member to act as the Chairperson of the selection committee and another one member to act as the Secretary of the selection committee and the Office shall perform the duty as the administrative unit of the selection committee.
+In the event that any member of the selection committee is vacant, a new member must be selected to replace such vacancy without delay. During the time that no new member has been selected, the selection committee shall consist of the existing members.
+No member of the section committee shall be entitled to be nominated as the Chairperson in section 8 (1) or the honorary director in section 8 (4).
+Section 10 In selecting the Chairperson in section 8 (1) or the honorary
+
+page 4
+
+director in section 8 (4), the selection committee shall select the persons who have qualifications in section 8 (1)or section 8 (4) as the case may be, including having the qualifications and no prohibited characteristics under section 11 and agree to be nominated for the selection in the same number as the number of Chairperson to be appointed in section 8 (1) or the number of the honorary director in to be appointed in section 8 (4).
+After the Chairperson in section 8 (1) or the honorary director in section 8 (4) have been selected, the selection committee shall submit the name of Chairperson in section 8 (1) or the honorary director in section 8 (4) together with the evidence of qualifications and no prohibited characteristics as well as the consent of such persons to the Cabinet for the appointment as the Chairperson in section 8 (1) or the honorary director in section 8 (4).
+The Prime Minister shall publish names of the Chairperson in section 8 (1) or honorary directors in section 8 (4) who are appointed by the Cabinet in the Government Gazette.
+Section 11 The Chairperson and the honorary director shall have the qualifications, and shall not be under the following prohibited characteristics:
+(1) being of Thai nationality;
+(2) not being bankrupt, or having been previously dishonestly bankrupt;
+(3) not being an incompetent or quasi-incompetent person;
+(4) not having been previously subjected to a final judgment to imprisonment regardless of whether he or she has actually been imprisoned or not, except for an offence committed by negligence or a misdemeanor;
+(5) not having been previously fired, dismissed or discharged from official service, a government agency or a state enterprise or private agency on the grounds of dishonest performance of duties or having committed severe wrongful conducts;
+(6) not having been previously removed from office according to the law;
+(7) not being a person holding political position, a member of local assembly or in a management position of local administration, a director or person holding position responsible for the management of political party, an adviser or officer of political party.
+Section 12 The Chairperson and the honorary director shall hold office for a term of four years.
+Upon the expiration of the term of office under paragraph one, if a new Chairperson or the honorary director has not yet been appointed, the Chairperson or the honorary director whose term of office has expired, shall be in office to continue to perform his or her duties until a new Chairperson or honorary director assumes his or her duties.
+The Chairperson, or the honorary director, who vacates office upon the expiration of the term, may be reappointed, but shall not seat in his or her office for more than two terms.
+Section 13 In addition to vacating office upon the expiration of the term under section 12, the Chairperson and the honorary director vacates office upon:
+(1) death;
+(2) resignation;
+(3) being dismissed by the Cabinet due to negligence in the performance of duty, disgraceful behavior, or incapability;
+(4) being disqualified, or under any of the prohibited characteristics under
+
+page 5
+
+section 11.
+In the case where the Chairperson or the honorary director vacates office before the expiration of the term, the person appointed to replace the vacant office shall be in office for the remaining term of office of such vacated Chairperson or honorary director, except where the remaining term of office is less than ninety days, in which case the appointment of a new Chairperson or a new honorary director may not have to be made.
+In the case where the Chairperson or the honorary director vacates office before the expiration of the term, the Committee shall consist of all existing members until a new Chairperson or a new honorary director is appointed, according to paragraph two, and in the case where the Chairperson vacates office before the expiration of the term, the Vice-Chairperson shall temporarily perform duties of the Chairperson.
+Section 14 At a meeting of the Committee, the presence of not less than one-half of all the members is required to constitute a quorum.
+The Chairperson shall preside over the meeting. In the case where the Chairperson does not attend the meeting, or is unable to perform the duties, the Vice-Chairperson shall act as a chairperson of the meeting. In the case where the Chairperson and the Vice-Chairperson do not attend the meeting, or are unable to perform the duties, the attending members shall elect one member among themselves to be the chairperson of the meeting.
+A decision of the meeting shall be made by a majority of votes. Each member shall have one vote. In case of equal votes, the chairperson of the meeting shall have an additional vote as the decisive vote.
+The meetings of the Committee may be may be undertaken by electronic means, or any other means, as prescribed by the Committee.
+Section 15 Any member who has a direct or indirect interest in the matter being considered in the meeting, shall inform the Committee of such interest prior to the meeting, and such member shall be prohibited from attending the meeting that is considering such matter.
+Section 16 The Committee shall have the following duties and power:
+(1) to make the master plan on the operation for the promotion and protection of Personal Data, which are consistent with policies, national strategies and relevant national plans, in order to propose to the committee of the national digital economy and society, in accordance with the law governing development of the digital economy and society;
+(2) to promote and support government agencies and the private sector in carrying out of activities in accordance with the master plan under (1), as well as to conduct the evaluation of the operation result of such master plan;
+(3) to determine measures or guidelines of the operation in relation to Personal Data protection in order to comply with this Act;
+(4) to issue notifications or rules for the execution of this Act;
+(5) to announce and establish criteria for providing protection of Personal Data which is sent or transferred to a foreign country;
+(6) to announce and establish guidance for the protection of Personal Data as guidelines which the Data Controller and the Data Processor shall comply;
+(7) to recommend the Cabinet on the enactment, or revision, of the existing laws or rules applicable to the protection of Personal Data;
+
+page 6
+
+with the rules prescribed by the Cabinet.
+The Chairperson of the sub-committees, the sub-committees, the Chairperson of the expert committee and expert committee appointed by the Committee shall receive a meeting allowance and other benefits in accordance with the rules prescribed by the Committee with approval of the Ministry of Finance.
+Section 18 The Committee shall have the power to appoint sub-committees for considering or performing any act as prescribed by the Committee.
+In the meeting of the sub-committee, the substances of sections 14 and 15 shall apply mutatis mutandis.
+
