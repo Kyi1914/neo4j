@@ -40,6 +40,18 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#isDocumentedBy
+:isDocumentedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#requiresConsent
+:requiresConsent rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Sensitive_Personal_Data ;
+                 rdfs:range :Consent ;
+                 rdfs:comment "requiresConsent" .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Chapter
 :has_Chapter rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :has_part ;
@@ -123,14 +135,6 @@
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
           rdfs:label "Activity" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Biometric_Data
-:Biometric_Data rdf:type owl:Class ;
-                rdfs:subClassOf :Sensitive_Personal_Data ;
-                :involves :Data_Subject ;
-                rdfs:comment "Biometric data is further defined as personal data arising from the use of techniques or technology related to the physical or behavioral dominance of a person, which can be used to identify that person apart from others, such as facial recognition data, iris recognition data, or fingerprint recognition data."@en ;
-                rdfs:label "Biometric Data" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Chapter
@@ -694,6 +698,30 @@ This category includes data pertaining to:
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#BiometricData
+:BiometricData rdf:type owl:NamedIndividual ,
+                        :Sensitive_Personal_Data ;
+               :requiresConsent :BiometricDataConsent ;
+               rdfs:comment "Biometric data is further defined as personal data arising from the use of techniques or technology related to the physical or behavioral dominance of a person, which can be used to identify that person apart from others, such as facial recognition data, iris recognition data, or fingerprint recognition data." ;
+               rdfs:label "BiometricData" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#BiometricDataConsent
+:BiometricDataConsent rdf:type owl:NamedIndividual ,
+                               :Consent .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#HealthData
+:HealthData rdf:type owl:NamedIndividual ,
+                     :Sensitive_Personal_Data ;
+            :requiresConsent :HealthDataConsent .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#HealthDataConsent
+:HealthDataConsent rdf:type owl:NamedIndividual ,
+                            :Consent .
+
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)
 <http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)> rdf:type owl:NamedIndividual ,
