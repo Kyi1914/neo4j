@@ -40,27 +40,12 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#hasConsentRecord
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/hasConsentRecord
 :hasConsentRecord rdf:type owl:ObjectProperty ;
                   rdfs:domain :DataProcessingActivity ;
                   rdfs:range :Consent ;
                   rdfs:comment "Link a processing to the concrete consent the subject gave." ;
                   rdfs:label "hasConsentRecord" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#processData
-:processData rdf:type owl:ObjectProperty ;
-             rdfs:domain :DataProcessingActivity ;
-             rdfs:range :Personal_Data ;
-             rdfs:comment "processes data item/category" ;
-             rdfs:label "processData" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#requiresConsent
-:requiresConsent rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Sensitive_Personal_Data ;
-                 rdfs:range :Consent ;
-                 rdfs:label "requiresConsent" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Chapter
@@ -128,15 +113,30 @@
                     rdfs:label "is part of Section" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/processData
+:processData rdf:type owl:ObjectProperty ;
+             rdfs:domain :DataProcessingActivity ;
+             rdfs:range :Personal_Data ;
+             rdfs:comment "processes data item/category" ;
+             rdfs:label "processData" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/requiresConsent
+:requiresConsent rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Sensitive_Personal_Data ;
+                 rdfs:range :Consent ;
+                 rdfs:label "requiresConsent" .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#description
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/description
 :description rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#source
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/source
 :source rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty .
 
@@ -145,11 +145,20 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ExplicitConsent
-:ExplicitConsent rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                 rdfs:comment "Expressly indicated consent for SDP according to PDPA section 26." ;
-                 rdfs:label "ExplicitConsent" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Protection_Policy
+:Data_Protection_Policy rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                        rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
+                        rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
+                        rdfs:label "DataProtectionPolicy" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PrivacyNotice
+:PrivacyNotice rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+               rdfs:comment "Privacy Notice is a publicly available document that communicates personal information to individuals about individuals whose personal information is collected." ;
+               rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
+               rdfs:label "PrivacyNotice" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Accuracy
@@ -429,6 +438,13 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
             rdfs:label "RetentionandErasure" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ExplicitConsent
+:ExplicitConsent rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 rdfs:comment "Expressly indicated consent for SDP according to PDPA section 26." ;
+                 rdfs:label "ExplicitConsent" .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Insensitive_Personal_Data
 :Insensitive_Personal_Data rdf:type owl:Class ;
                            rdfs:subClassOf :Personal_Data ;
@@ -448,10 +464,7 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Minister
 :Minister rdf:type owl:Class ;
-          rdfs:subClassOf :Entity ;
-          rdfs:comment "The Minister who is in charge under this Act" ;
-          rdfs:isDefinedBy "Section 6" ;
-          rdfs:label "Minister" .
+          rdfs:subClassOf :Entity .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Obligation
@@ -473,10 +486,7 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Office
 :Office rdf:type owl:Class ;
-        rdfs:subClassOf :Entity ;
-        rdfs:comment "The Office of the Personal Data Protection Committee." ;
-        rdfs:isDefinedBy "Section6" ;
-        rdfs:label "Office" .
+        rdfs:subClassOf :Entity .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Part
@@ -489,10 +499,7 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Person
 :Person rdf:type owl:Class ;
-        rdfs:subClassOf :Entity ;
-        rdfs:comment "A natural person." ;
-        rdfs:isDefinedBy "Section 6" ;
-        rdfs:label "Person" .
+        rdfs:subClassOf :Entity .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data
@@ -610,10 +617,7 @@ Chapter 1, Section 6""" ;
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SecretaryGeneral
 :SecretaryGeneral rdf:type owl:Class ;
-                  rdfs:subClassOf :Entity ;
-                  rdfs:comment "The Secretary-General of the Personal Data Protection Committee." ;
-                  rdfs:isDefinedBy "Section 6" ;
-                  rdfs:label "SecretaryGeneral" .
+                  rdfs:subClassOf :Entity .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Section
@@ -680,7 +684,17 @@ This category includes data pertaining to:
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#BiometricData
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)
+<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)> rdf:type owl:NamedIndividual ,
+                                                                                                                                  :LegalResources ;
+                                                                                                                         :eli:title "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
+                                                                                                                         :eli:title_alternative "PDPA Thailand"@en ;
+                                                                                                                         rdfs:comment "The PDPA is Thailand's comprehensive personal data protection law, enacted in 2019, that regulates the collection, use, and disclosure of personal data and provides rights to data subjects."@en ;
+                                                                                                                         rdfs:label "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
+                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> "Thailand’s Personal Data Protection Act, B.E. 2562 (2019), is the legal framework that governs the processing of personal data in Thailand, establishing rules for data controllers, data processors, and providing rights to data subjects."@en .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/BiometricData
 :BiometricData rdf:type owl:NamedIndividual ,
                         :Sensitive_Personal_Data ;
                :requiresConsent :BiometricDataConsent ;
@@ -688,7 +702,7 @@ This category includes data pertaining to:
                rdfs:label "BiometricData" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#BiometricDataConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/BiometricDataConsent
 :BiometricDataConsent rdf:type owl:NamedIndividual ,
                                :Consent ;
                       :description "BiometricDataConsent" ;
@@ -697,111 +711,111 @@ This category includes data pertaining to:
                       rdfs:label "BiometricDataConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ChapterI
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ChapterI
 :ChapterI rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Comittee
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Comittee
 :Comittee rdf:type owl:NamedIndividual ,
                    :Entity ;
           rdfs:label "Committee" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CompetentOfiicial
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/CompetentOfiicial
 :CompetentOfiicial rdf:type owl:NamedIndividual ,
                             :Entity ;
                    rdfs:label "CompetentOfficial" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CriminalRecords
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/CriminalRecords
 :CriminalRecords rdf:type owl:NamedIndividual ,
                           :Sensitive_Personal_Data ;
                  :requiresConsent :CriminalRecordsConsent ;
                  rdfs:label "CriminalRecords" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CriminalRecordsConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/CriminalRecordsConsent
 :CriminalRecordsConsent rdf:type owl:NamedIndividual ,
                                  :Consent ;
                         rdfs:isDefinedBy "section26" ;
                         rdfs:label "CriminalRecordsConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CultData
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/CultData
 :CultData rdf:type owl:NamedIndividual ,
                    :Sensitive_Personal_Data ;
           :requiresConsent :CultDataConsent ;
           rdfs:label "CultData" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#CultDataConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/CultDataConsent
 :CultDataConsent rdf:type owl:NamedIndividual ,
                           :Consent ;
                  rdfs:isDefinedBy "section26" ;
                  rdfs:label "CultDataConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataController
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DataController
 :DataController rdf:type owl:NamedIndividual ,
                          :Entity ;
                 rdfs:label "DataController" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProcessor
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DataProcessor
 :DataProcessor rdf:type owl:NamedIndividual ,
                         :Entity ;
                rdfs:label "DataProcessor" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataProtectionOfficer
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DataProtectionOfficer
 :DataProtectionOfficer rdf:type owl:NamedIndividual ,
                                 :Entity ;
                        rdfs:label "DataProtectionOfficer" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DataSubject
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DataSubject
 :DataSubject rdf:type owl:NamedIndividual ,
                       :Entity ;
              rdfs:comment "An individual or entity to whom their personal data relates." ;
              rdfs:label "DataSubject" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DisabilityData
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DisabilityData
 :DisabilityData rdf:type owl:NamedIndividual ,
                          :Sensitive_Personal_Data ;
                 :requiresConsent :DisabilityDataConsent ;
                 rdfs:label "DisabilityData" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#DisabilityDataConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/DisabilityDataConsent
 :DisabilityDataConsent rdf:type owl:NamedIndividual ,
                                 :Consent ;
                        rdfs:isDefinedBy "DisabilityDataConsent" ,
                                         "section26" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EthnicOrigin
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/EthnicOrigin
 :EthnicOrigin rdf:type owl:NamedIndividual ,
                        :Sensitive_Personal_Data ;
               :requiresConsent :EthnicOriginConsent ;
               rdfs:label "EthnicOrigin" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EthnicOriginConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/EthnicOriginConsent
 :EthnicOriginConsent rdf:type owl:NamedIndividual ,
                               :Consent ;
                      rdfs:isDefinedBy "section26" ;
                      rdfs:label "EthnicOriginConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#GeneticDataConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/GeneticDataConsent
 :GeneticDataConsent rdf:type owl:NamedIndividual ,
                              :Consent ;
                     rdfs:isDefinedBy "section26" ;
                     rdfs:label "GeneticDataConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#HealthData
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/HealthData
 :HealthData rdf:type owl:NamedIndividual ,
                      :Sensitive_Personal_Data ;
             :requiresConsent :HealthDataConsent ;
@@ -818,7 +832,7 @@ Here are the core provisions related to health data:
     ◦ Administrative Liability: A Data Controller who violates the prohibition on collecting health data (under section 26), or related provisions on use, disclosure, or transfer (section 27 or 28), can be punished with an administrative fine not exceeding Baht five million. A Data Processor who unlawfully sends or transfers health data (under section 26) can also face an administrative fine not exceeding Baht five million.""" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#HealthDataConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/HealthDataConsent
 :HealthDataConsent rdf:type owl:NamedIndividual ,
                             :Consent ;
                    :description "HealthDataConsent" ;
@@ -827,138 +841,148 @@ Here are the core provisions related to health data:
                    rdfs:label "HealthDataConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LegalClaimsException
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalClaimsException
 :LegalClaimsException rdf:type owl:NamedIndividual ,
                                :ExplicitConsent ;
                       rdfs:label "LegalClaimsException" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ManifestlyPublicException
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ManifestlyPublicException
 :ManifestlyPublicException rdf:type owl:NamedIndividual ,
                                     :ExplicitConsent ;
                            rdfs:label "ManifestlyPublicException" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Minister
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Minister
 :Minister rdf:type owl:NamedIndividual ,
-                   :Entity ;
-          rdfs:label "Minister" .
+                   :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#NonProfitException
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/NonProfitException
 :NonProfitException rdf:type owl:NamedIndividual ,
                              :ExplicitConsent ;
                     rdfs:label "NonProfitException" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Office
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Office
 :Office rdf:type owl:NamedIndividual ,
-                 :Entity ;
-        rdfs:label "Office" .
+                 :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Person
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Person
 :Person rdf:type owl:NamedIndividual ,
-                 :Entity ;
-        rdfs:label "Person" .
+                 :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PoliticalOpinions
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PoliticalOpinions
 :PoliticalOpinions rdf:type owl:NamedIndividual ,
                             :Sensitive_Personal_Data ;
                    :requiresConsent :PoliticalOpinionsConsent ;
                    rdfs:label "PoliticalOpinion" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PoliticalOpinionsConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PoliticalOpinionsConsent
 :PoliticalOpinionsConsent rdf:type owl:NamedIndividual ,
                                    :Consent ;
                           rdfs:isDefinedBy "section26" ;
                           rdfs:label "PoliticalOpinionsConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PublicHealthException
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PublicHealthException
 :PublicHealthException rdf:type owl:NamedIndividual ,
                                 :ExplicitConsent ;
                        rdfs:label "PublicHealthException" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RacialConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/RacialConsent
 :RacialConsent rdf:type owl:NamedIndividual ,
                         :Consent ;
                rdfs:isDefinedBy "section26" ;
                rdfs:label "RacialConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#RacialData
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/RacialData
 :RacialData rdf:type owl:NamedIndividual ,
                      :Sensitive_Personal_Data ;
             :requiresConsent :RacialConsent ;
             rdfs:label "RacialData" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ReligiousOrPhilosophicalBeliefs
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ReligiousOrPhilosophicalBeliefs
 :ReligiousOrPhilosophicalBeliefs rdf:type owl:NamedIndividual ,
                                           :Sensitive_Personal_Data ;
                                  :requiresConsent :ReligiousOrPhilosophicalBeliefsConsent ;
                                  rdfs:label "ReligiousOrPhilosophicalBeliefs" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ReligiousOrPhilosophicalBeliefsConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ReligiousOrPhilosophicalBeliefsConsent
 :ReligiousOrPhilosophicalBeliefsConsent rdf:type owl:NamedIndividual ,
                                                  :Consent ;
                                         rdfs:isDefinedBy "section26" ;
                                         rdfs:label "ReligiousOrPhilosophicalBeliefsConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SecretaryGeneral
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SecretaryGeneral
 :SecretaryGeneral rdf:type owl:NamedIndividual ,
-                           :Entity ;
-                  rdfs:label "SecretaryGeneral" .
+                           :Entity .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SexualBehavior
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SexualBehavior
 :SexualBehavior rdf:type owl:NamedIndividual ,
                          :Sensitive_Personal_Data ;
                 :requiresConsent :SexualBehaviorConsent ;
                 rdfs:label "SexualBehavior" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SexualBehaviorConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SexualBehaviorConsent
 :SexualBehaviorConsent rdf:type owl:NamedIndividual ,
                                 :Consent ;
                        rdfs:isDefinedBy "section26" ;
                        rdfs:label "SexualBehaviorConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#TradeUnionInformation
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/TradeUnionInformation
 :TradeUnionInformation rdf:type owl:NamedIndividual ,
                                 :Sensitive_Personal_Data ;
                        :requiresConsent :TradeUnionInformationConsent ;
                        rdfs:label "TradeUnionInformation" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#TradeUnionInformationConsent
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/TradeUnionInformationConsent
 :TradeUnionInformationConsent rdf:type owl:NamedIndividual ,
                                        :Consent ;
                               rdfs:isDefinedBy "section26" ;
                               rdfs:label "TradeUnionInformationConsent" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#VitalInterestException
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/VitalInterestException
 :VitalInterestException rdf:type owl:NamedIndividual ,
                                  :ExplicitConsent ;
                         rdfs:label "VitalInterestException" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)
-<http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)> rdf:type owl:NamedIndividual ,
-                                                                                                                                  :LegalResources ;
-                                                                                                                         :eli:title "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
-                                                                                                                         :eli:title_alternative "PDPA Thailand"@en ;
-                                                                                                                         rdfs:comment "The PDPA is Thailand's comprehensive personal data protection law, enacted in 2019, that regulates the collection, use, and disclosure of personal data and provides rights to data subjects."@en ;
-                                                                                                                         rdfs:label "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
-                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> "Thailand’s Personal Data Protection Act, B.E. 2562 (2019), is the legal framework that governs the processing of personal data in Thailand, establishing rules for data controllers, data processors, and providing rights to data subjects."@en .
+#################################################################
+#    Annotations
+#################################################################
+
+:Minister rdfs:comment "The Minister who is in charge under this Act" ;
+          rdfs:isDefinedBy "Section 6" ;
+          rdfs:label "Minister" .
+
+
+:Office rdfs:comment "The Office of the Personal Data Protection Committee." ;
+        rdfs:isDefinedBy "Section6" ;
+        rdfs:label "Office" .
+
+
+:Person rdfs:comment "A natural person." ;
+        rdfs:isDefinedBy "Section 6" ;
+        rdfs:label "Person" .
+
+
+:SecretaryGeneral rdfs:comment "The Secretary-General of the Personal Data Protection Committee." ;
+                  rdfs:isDefinedBy "Section 6" ;
+                  rdfs:label "SecretaryGeneral" .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
