@@ -194,7 +194,8 @@
 
 The act of obtaining personal data from a data subject or a third party. Collection must be for a notified purpose and limited to what’s necessary.""" ;
                              rdfs:isDefinedBy "Section 22" ;
-                             rdfs:label "DataCollectionActivity" .
+                             rdfs:label "DataCollectionActivity" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The document informing the data owner about the collection of personal data does not necessarily have to be the data owner's name. The company should consider the document informing the data owner about the collection of personal data in the data set in the initial process before collecting personal data." .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Committee
