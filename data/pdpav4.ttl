@@ -145,22 +145,6 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Data_Protection_Policy
-:Data_Protection_Policy rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                        rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
-                        rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
-                        rdfs:label "DataProtectionPolicy" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PrivacyNotice
-:PrivacyNotice rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-               rdfs:comment "Privacy Notice is a publicly available document that communicates personal information to individuals about individuals whose personal information is collected." ;
-               rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
-               rdfs:label "PrivacyNotice" .
-
-
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Accuracy
 :Accuracy rdf:type owl:Class ;
           rdfs:subClassOf :Data_Activity ;
@@ -394,6 +378,14 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
                              rdfs:label "DataProtectionOfficer" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Protection_Policy
+:Data_Protection_Policy rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                        rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
+                        rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
+                        rdfs:label "DataProtectionPolicy" .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Subject
 :Data_Subject rdf:type owl:Class ;
               rdfs:subClassOf :Entity ;
@@ -513,6 +505,14 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
                rdfs:isDefinedBy """PDPA 
 Chapter 1, Section 6""" ;
                rdfs:label "PersonalData" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PrivacyNotice
+:PrivacyNotice rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+               rdfs:comment "Privacy Notice is a publicly available document that communicates personal information to individuals about individuals whose personal information is collected." ;
+               rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
+               rdfs:label "PrivacyNotice" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Processing
@@ -693,7 +693,7 @@ This category includes data pertaining to:
                                                                                                                          :eli:title "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
                                                                                                                          :eli:title_alternative "PDPA Thailand"@en ;
                                                                                                                          rdfs:comment "The PDPA is Thailand's comprehensive personal data protection law, enacted in 2019, that regulates the collection, use, and disclosure of personal data and provides rights to data subjects."@en ;
-                                                                                                                         rdfs:label "Personal Data Protection Act, B.E. 2562 (2019)"@en ;
+                                                                                                                         rdfs:label "PersonalDataProtectionAct, B.E. 2562 (2019)"@en ;
                                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> "Thailand’s Personal Data Protection Act, B.E. 2562 (2019), is the legal framework that governs the processing of personal data in Thailand, establishing rules for data controllers, data processors, and providing rights to data subjects."@en .
 
 
