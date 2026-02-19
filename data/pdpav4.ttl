@@ -378,14 +378,6 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
                              rdfs:label "DataProtectionOfficer" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Protection_Policy
-:Data_Protection_Policy rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                        rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
-                        rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
-                        rdfs:label "DataProtectionPolicy" .
-
-
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Data_Subject
 :Data_Subject rdf:type owl:Class ;
               rdfs:subClassOf :Entity ;
@@ -507,9 +499,16 @@ Chapter 1, Section 6""" ;
                rdfs:label "PersonalData" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data_Protection_Policy
+:Personal_Data_Protection_Policy rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                 rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
+                                 rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
+                                 rdfs:label "PersonalDataProtectionPolicy"@en .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PrivacyNotice
 :PrivacyNotice rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                rdfs:comment "Privacy Notice is a publicly available document that communicates personal information to individuals about individuals whose personal information is collected." ;
                rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
                rdfs:label "PrivacyNotice" .
