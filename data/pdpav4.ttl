@@ -410,6 +410,28 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Entity
 :Entity rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+        rdfs:comment """Individual or Entity in the PDPA
+
+Section 6 In this Act,
+“Personal Data” means any information relating to a Person, which enables
+the identification of such Person, whether directly or indirectly, but not including the
+information of the deceased Persons in particular;
+“Data Controller” means a Person or a juristic person having the power and
+duties to make decisions regarding the collection, use, or disclosure of the Personal Data;
+“Data Processor” means a Person or a juristic person who operates in relation
+to the collection, use, or disclosure of the Personal Data pursuant to the orders given by or on
+behalf of a Data Controller, whereby such Person or juristic person is not the Data Controller;
+“Person” means a natural person;
+“Committee” means the Personal Data Protection Committee;
+“Competent Official” means any person appointed by the Minister to perform
+acts under this Act;
+“Office” means the Office of the Personal Data Protection Committee;
+“Secretary-General” means the Secretary-General of the Personal Data
+Protection Committee;
+“Minister” means the Minister who is in charge under this Act.
+Section 7 The Minister of Digital Economy and Society shall be in
+charge under this Act, and shall have the power to appoint the Competent Official to perform
+acts under this Act."""@en ;
         rdfs:isDefinedBy "Section 6" ;
         rdfs:label "Entity" ;
         rdfs:seeAlso "Individuals" .
@@ -502,7 +524,17 @@ Chapter 1, Section 6""" ;
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Personal_Data_Protection_Policy
 :Personal_Data_Protection_Policy rdf:type owl:Class ;
                                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                 rdfs:comment "Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information." ;
+                                 rdfs:comment """Personal Data Protection Policy is an internal document that sets out the processes and procedures the company has implemented to ensure compliance with the PDPA in the processing of personal information.
+
+Main Source from PDPA original Document:
+
+Section 29 In the event that the Data Controller or the Data Processor who is in the Kingdom of Thailand has put in place a Personal Data protection policy regarding the sending or transferring of Personal Data to another Data Controller or Data Processor who is in a foreign country, and is in the same affiliated business, or is in the same group of undertakings, in order to jointly operate the business or group of undertakings. If such Personal Data protection policy has been reviewed and certified by the Office, the sending or transferring of Personal Data to a foreign country, which is in accordance with such reviewed and certified Personal Data protection policy, can be carried out and shall be exempt from compliance with section 28.
+
+The Personal Data protection policy, the nature of the same affiliated
+undertaking or affiliated business in order to jointly operate the undertaking or business, and the rules and methods for the review and certification in paragraph one shall be as prescribed and announced by the Committee.
+
+In the absent of a decision by the Committee in accordance with section 28, or
+the Personal Data protection policy referred in paragraph one, the Data Controller or the Data Processor may send or transfer the Personal Data to a foreign country in exemption to compliance with section 28, if the Data Controller or the Data Processor provides suitable protection measures which enable the enforcement of the data subject’s rights, including effective legal remedial measures according to the rules and methods as prescribed and announced by the Committee."""@en ;
                                  rdfs:isDefinedBy "added to answer QA, answer is from the ground truth dataset." ;
                                  rdfs:label "PersonalDataProtectionPolicy"@en .
 
