@@ -268,7 +268,38 @@ Data can only be used/disclosed for the purpose notified at the time of collecti
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Cross-border_Transfer
 :Cross-border_Transfer rdf:type owl:Class ;
                        rdfs:subClassOf :Disclosure ;
-                       rdfs:comment "Sending/Transferring to a foreign country or international organization." ;
+                       :involves :DataController ,
+                                 :Personal_Data ,
+                                 :Personal_Data_Protection_Policy ;
+                       rdfs:comment """Cross-border Personal Data Transfer
+
+Sending/Transferring to a foreign country or international organization.
+
+Section 28 In the event that the Data Controller sends or transfers the
+Personal Data to a foreign country, the destination country or international organization that receives such Personal Data shall have adequate data protection standard, and shall be carried out in accordance with the rules for the protection of Personal Data as prescribed by the Committee in section 16(5), except in the following circumstances:
+(1) where it is for compliance with the law;
+(2) where the consent of the data subject has been obtained, provided that the
+data subject has been informed of the inadequate Personal Data protection standards of the destination country or international organization;
+(3) where it is necessary for the performance of a contract to which the data
+subject is a party, or in order to take steps at the request of the data subject prior to entering into a contract;
+(4) where it is for compliance with a contract between the Data Controller, and
+other Persons or juristic persons for the interests of the data subject;
+(5) where it is to prevent or suppress a danger to the life, body, or health of the
+data subject or other Persons, when the data subject is incapable of giving the consent at such time;
+(6) where it is necessary for carrying out the activities in relation to substantial
+public interest.
+
+In the event that there is a problem with regard to the adequacy of Personal Data
+protection standards of the destination country or international organization, such problem shall be submitted to the Committee to decide. The decision made by the Committee may be reviewed when there is a new evidence convincing that the destination country or international organization that receives such Personal Data has developed adequate Personal Data protection standards.
+
+Section 29 In the event that the Data Controller or the Data Processor who
+is in the Kingdom of Thailand has put in place a Personal Data protection policy regarding the sending or transferring of Personal Data to another Data Controller or Data Processor who is in a foreign country, and is in the same affiliated business, or is in the same group of undertakings, in order to jointly operate the business or group of undertakings. If such Personal Data protection policy has been reviewed and certified by the Office, the sending or transferring of Personal Data to a foreign country, which is in accordance with such reviewed and certified Personal Data protection policy, can be carried out and shall be exempt from compliance with section 28.
+
+The Personal Data protection policy, the nature of the same affiliated
+undertaking or affiliated business in order to jointly operate the undertaking or business, and the rules and methods for the review and certification in paragraph one shall be as prescribed and announced by the Committee.
+In the absent of a decision by the Committee in accordance with section 28, or
+the Personal Data protection policy referred in paragraph one, the Data Controller or the Data Processor may send or transfer the Personal Data to a foreign country in exemption to compliance with section 28, if the Data Controller or the Data Processor provides suitable protection measures
+which enable the enforcement of the data subject’s rights, including effective legal remedial measures according to the rules and methods as prescribed and announced by the Committee.""" ;
                        rdfs:label "CrossBorderTransfer" .
 
 
@@ -665,7 +696,8 @@ the Personal Data protection policy referred in paragraph one, the Data Controll
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Sensitive_Personal_Data
 :Sensitive_Personal_Data rdf:type owl:Class ;
                          rdfs:subClassOf :Personal_Data ;
-                         :involves :Data_Subject ;
+                         :involves :BiometricData ,
+                                   :Data_Subject ;
                          rdfs:comment """Sensitive Personal Data (requiring explicit consent and subject to stricter prohibitions)
 The collection of this specific kind of personal data is generally prohibited without explicit consent from the data subject, except under certain specified circumstances
 This category includes data pertaining to:
