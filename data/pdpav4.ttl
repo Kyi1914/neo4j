@@ -40,6 +40,13 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#identifies
+:identifies rdf:type owl:ObjectProperty ;
+            rdfs:domain :Personal_Data ;
+            rdfs:range :Data_Subject ;
+            rdfs:comment "Personal Data identifies a Data Subject"@en .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/hasConsentRecord
 :hasConsentRecord rdf:type owl:ObjectProperty ;
                   rdfs:domain :DataProcessingActivity ;
@@ -144,6 +151,14 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Representative
+:Representative rdf:type owl:Class ;
+                rdfs:subClassOf :Entity ;
+                rdfs:comment "A person in Thailand designated by a foreign Data Controller or Processor to act on their behalf" ;
+                rdfs:isDefinedBy "Chapter 3, Section 30" ;
+                rdfs:label "Representative"@en .
+
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Accuracy
 :Accuracy rdf:type owl:Class ;
@@ -441,6 +456,7 @@ Confidentiality: Maintain the confidentiality of any personal data accessed in t
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Entity
 :Entity rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+        :eli:title_alternative "Actor" ;
         rdfs:comment """Individual or Entity in the PDPA
 
 Section 6 In this Act,
