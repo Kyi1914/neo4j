@@ -52,30 +52,20 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#hasLegalBasis
-:hasLegalBasis rdf:type owl:ObjectProperty ;
-               rdfs:domain :DataProcessingActivity ;
-               rdfs:range :LawfulBasis ;
-               :source :Section24 ;
-               rdfs:comment "Links a personal data processing activity to the lawful basis that justifies the collection, use, or disclosure of personal data." ;
-               rdfs:isDefinedBy "Section24" ;
-               rdfs:label "hasLegalBasis" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#subjectToPDPA
-:subjectToPDPA rdf:type owl:ObjectProperty ;
-               rdfs:domain :Entity ,
-                           :PublicSectorEntity ;
-               rdfs:range :PersonalDataProtectionAct ;
-               rdfs:comment "Links an entity to the personal data protection act that applies to it." ;
-               rdfs:label "subjectToPDPA" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#hasExemption
+:hasExemption rdf:type owl:ObjectProperty ;
+              rdfs:domain :Sensitive_Personal_Data ;
+              rdfs:range :ExplicitConsentException ;
+              rdfs:comment "Links an entity to PDPA Section 4 exemption categories." ;
+              rdfs:label "hasExemption" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/MandatoryExplicitFor
 :MandatoryExplicitFor rdf:type owl:ObjectProperty ;
                       rdfs:domain :Consent ;
                       rdfs:range :Sensitive_Personal_Data ;
-                      :source "Section26" .
+                      :source "Section26" ;
+                      rdfs:label "MandatoryExplicitFor" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/actsAsDataController
@@ -101,14 +91,16 @@
        rdfs:domain :Data_Controller ;
        rdfs:range :Personal_Data_Protection_Policy ;
        :source "Seciton29" ;
-       rdfs:comment "Data Controller may adopt Data Protection Policy." .
+       rdfs:comment "Data Controller may adopt Data Protection Policy." ;
+       rdfs:label "adopt" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/certifies
 :certifies rdf:type owl:ObjectProperty ;
            rdfs:domain :PDPC ;
            rdfs:range :Personal_Data_Protection_Policy ;
-           :source "Section29" .
+           :source "Section29" ;
+           rdfs:label "certifies" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/collects
@@ -117,7 +109,8 @@
           rdfs:domain :Data_Controller ;
           rdfs:range :Personal_Data ;
           :source "Section19" ;
-          rdfs:comment "DataController collects PersonalData" .
+          rdfs:comment "DataController collects PersonalData" ;
+          rdfs:label "collects" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/discloses
@@ -126,7 +119,8 @@
            rdfs:domain :Data_Controller ;
            rdfs:range :Personal_Data ;
            :source "Section19" ;
-           rdfs:comment "DataController discloses PersonalData" .
+           rdfs:comment "DataController discloses PersonalData" ;
+           rdfs:label "discloses" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/establish
@@ -134,21 +128,24 @@
            rdfs:domain :Data_Controller ;
            rdfs:range :LawfulBasis ;
            :source "Section24" ;
-           rdfs:comment "DataController must establish Lawful Basis" .
+           rdfs:comment "DataController must establish Lawful Basis" ;
+           rdfs:label "establish" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/exercises
 :exercises rdf:type owl:ObjectProperty ;
            rdfs:domain :Data_Subject ;
            rdfs:range :Data_Subject_Rights ;
-           :source "Section30-36" .
+           :source "Section30-36" ;
+           rdfs:label "exercises" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/governedBy
 :governedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :Cross-border_Transfer ;
             rdfs:range :Personal_Data_Protection_Policy ;
-            :source "Section29" .
+            :source "Section29" ;
+            rdfs:label "governedBy" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/hasConsentRecord
@@ -157,6 +154,16 @@
                   rdfs:range :Consent ;
                   rdfs:comment "Link a processing to the concrete consent the subject gave." ;
                   rdfs:label "hasConsentRecord" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/hasLegalBasis
+:hasLegalBasis rdf:type owl:ObjectProperty ;
+               rdfs:domain :DataProcessingActivity ;
+               rdfs:range :LawfulBasis ;
+               :source :Section24 ;
+               rdfs:comment "Links a personal data processing activity to the lawful basis that justifies the collection, use, or disclosure of personal data." ;
+               rdfs:isDefinedBy "Section24" ;
+               rdfs:label "hasLegalBasis" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/has_Chapter
@@ -198,7 +205,8 @@
 :identifies rdf:type owl:ObjectProperty ;
             rdfs:domain :Personal_Data ;
             rdfs:range :Data_Subject ;
-            rdfs:comment "Personal Data identifies a Data Subject"@en .
+            rdfs:comment "Personal Data identifies a Data Subject"@en ;
+            rdfs:label "identifies" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/is_part_of
@@ -238,7 +246,8 @@
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :PDPC ;
                 rdfs:range :Cross-border_Transfer ;
-                :source "Section 16" .
+                :source "Section 16" ;
+                rdfs:label "issuesRulesFor" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/obtain
@@ -246,14 +255,16 @@
         rdfs:domain :Data_Controller ;
         rdfs:range :Consent ;
         :source "Section19" ;
-        rdfs:comment "DataController obtains Consent" .
+        rdfs:comment "DataController obtains Consent" ;
+        rdfs:label "obtain" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/override
 :override rdf:type owl:ObjectProperty ;
           rdfs:domain :LawfulBasis ;
           rdfs:range :Consent ;
-          :source "Section24" .
+          :source "Section24" ;
+          rdfs:label "override" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/processData
@@ -269,7 +280,8 @@
                    rdfs:domain :Data_Processor ;
                    rdfs:range :Data_Controller ;
                    :source "Section6" ;
-                   rdfs:comment "DataProcessor processes on behalf of DataController." .
+                   rdfs:comment "DataProcessor processes on behalf of DataController." ;
+                   rdfs:label "processOnBehalfOf" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/provide
@@ -277,7 +289,8 @@
          rdfs:domain :Data_Controller ;
          rdfs:range :PrivacyNotice ;
          :source "Section23" ;
-         rdfs:comment "DataController must provide Notice" .
+         rdfs:comment "DataController must provide Notice" ;
+         rdfs:label "provide" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/provides
@@ -285,28 +298,40 @@
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :Data_Subject ;
           rdfs:range :Consent ;
-          :source "Section19" .
+          :source "Section19" ;
+          rdfs:label "provides" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/receives
 :receives rdf:type owl:ObjectProperty ;
           rdfs:domain :Data_Subject ;
           rdfs:range :PrivacyNotice ;
-          :source "Section23" .
+          :source "Section23" ;
+          rdfs:label "receives" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/requiredFor
 :requiredFor rdf:type owl:ObjectProperty ;
              rdfs:domain :Consent ;
              rdfs:range :Personal_Data ;
-             :source "Section19" .
+             :source "Section19" ;
+             rdfs:label "requiredFor" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/requiresConsent
 :requiresConsent rdf:type owl:ObjectProperty ;
                  rdfs:domain :Sensitive_Personal_Data ;
-                 rdfs:range :Consent ;
-                 rdfs:label "requiresConsent" .
+                 rdfs:range :ExplicitConsent ;
+                 rdfs:label "requiresExplicitConsent" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/subjectToPDPA
+:subjectToPDPA rdf:type owl:ObjectProperty ;
+               rdfs:domain :Entity ,
+                           :PublicSectorEntity ;
+               rdfs:range :PersonalDataProtectionAct ;
+               rdfs:comment "Links an entity to the personal data protection act that applies to it." ;
+               rdfs:label "subjectToPDPA" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/transferToForeignCountry
@@ -314,7 +339,8 @@
                           rdfs:domain :Data_Controller ;
                           rdfs:range :Cross-border_Transfer ;
                           :source "Section28" ;
-                          rdfs:comment "Data Controller may transfer to foreign country via Cross border Transfer ." .
+                          rdfs:comment "Data Controller may transfer to foreign country via Cross border Transfer ." ;
+                          rdfs:label "transferToForeignCountry" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/uses
@@ -323,7 +349,8 @@
       rdfs:domain :Data_Controller ;
       rdfs:range :Personal_Data ;
       :source "Section19" ;
-      rdfs:comment "DataController uses PersonalData" .
+      rdfs:comment "DataController uses PersonalData" ;
+      rdfs:label "uses" .
 
 
 #################################################################
@@ -343,13 +370,35 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ExplicitConsentException
-:ExplicitConsentException rdf:type owl:Class ;
-                          rdfs:subClassOf :Rule ;
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Exemption
+:Exemption rdf:type owl:Class ;
+           rdfs:subClassOf :Rule ;
+           rdfs:comment """Section 4 exemptions where PDPA does not fully apply.
+
+If applicable, exemption means PDPA does not apply to the entity/activity.""" ;
+           rdfs:label "Exemption" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PDPAConcept
+:PDPAConcept rdf:type owl:Class ;
+             rdfs:comment "Root class for all PDPA ontology concepts." ;
+             rdfs:label "PDPAConcept" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SensitiveDataProhibition
+:SensitiveDataProhibition rdf:type owl:Class ;
+                          rdfs:subClassOf :SensitiveDataRule ;
                           :source :Section26 ;
-                          rdfs:comment "An exception under PDPA Section 26 where sensitive personal data may be collected without explicit consent." ;
-                          rdfs:isDefinedBy "Section 26" ;
-                          rdfs:label "ExplicitConsentException" .
+                          rdfs:comment "Sensitive personal data cannot be processed unless explicit consent or a legal exception applies." ;
+                          rdfs:label "SensitiveDataProhibition" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SensitiveDataRule
+:SensitiveDataRule rdf:type owl:Class ;
+                   rdfs:subClassOf :Rule ;
+                   :source :Section26 ;
+                   rdfs:comment "Rules governing processing of sensitive personal data under Section 26." ;
+                   rdfs:label "SensitiveDataRule" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Accuracy
@@ -397,6 +446,9 @@
          rdfs:subClassOf :Process ;
          :involves :Data_Subject ,
                    :Personal_Data ;
+         :source :Section19 ,
+                 :Section20 ,
+                 :Section21 ;
          rdfs:comment """Section 19
 
 Personal data cannot be collected, used, or disclosed without consent, unless a lawful exception applies.
@@ -428,6 +480,8 @@ Data can only be used/disclosed for the purpose notified at the time of collecti
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Consent_Activity
 :Consent_Activity rdf:type owl:Class ;
                   rdfs:subClassOf :Process ;
+                  :source :Chapter2Part1 ,
+                          :Section19 ;
                   rdfs:comment "The act by which a data subject gives or withdraws consent as prescribed in Section 19 of the PDPA." ;
                   rdfs:isDefinedBy "Section19 (Part 1, General Provisions, Chapter II)" ;
                   rdfs:label "ConsentActivity" .
@@ -763,7 +817,7 @@ measures according to the rules and methods as prescribed and announced by the C
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Entity
 :Entity rdf:type owl:Class ;
-        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+        rdfs:subClassOf :PDPAConcept ;
         :source :Section6 ;
         :eli:title_alternative "Actor" ;
         rdfs:comment """Individual or Entity in the PDPA
@@ -787,7 +841,9 @@ Protection Committee;
 “Minister” means the Minister who is in charge under this Act.
 Section 7 The Minister of Digital Economy and Society shall be in
 charge under this Act, and shall have the power to appoint the Competent Official to perform
-acts under this Act."""@en ;
+acts under this Act.
+
+Entities may be subject to PDPA unless an exemption applies under Section 4."""@en ;
         rdfs:isDefinedBy "Section 6" ;
         rdfs:label "Entity" ;
         rdfs:seeAlso "Individuals" .
@@ -819,10 +875,19 @@ acts under this Act."""@en ;
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ExplicitConsent
 :ExplicitConsent rdf:type owl:Class ;
                  rdfs:subClassOf :Consent ;
-                 :source "Section26" ;
+                 :source :Section26 ;
                  rdfs:comment "Expressly indicated consent required for sensitive personal data under PDPA Section 26, unless a legal exception applies." ;
                  rdfs:isDefinedBy "Section26" ;
                  rdfs:label "ExplicitConsent" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ExplicitConsentException
+:ExplicitConsentException rdf:type owl:Class ;
+                          rdfs:subClassOf :Rule ;
+                          :source :Section26 ;
+                          rdfs:comment "An exception under PDPA Section 26 where sensitive personal data may be collected without explicit consent." ;
+                          rdfs:isDefinedBy "Section 26" ;
+                          rdfs:label "SensitivePersonalDataException" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/GeneticData
@@ -842,12 +907,12 @@ acts under this Act."""@en ;
 :GovernmentAgency rdf:type owl:Class ;
                   rdfs:subClassOf :PublicSectorEntity ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty :subjectToPDPA ;
-                                    owl:someValuesFrom :PersonalDataProtectionAct
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :actsAsDataController ;
                                     owl:someValuesFrom :Data_Controller
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :subjectToPDPA ;
+                                    owl:someValuesFrom :PersonalDataProtectionAct
                                   ] ;
                   :example """Use instances only if there have specific classes
 MinistryOfPublicHealth instanceOf GovernmentAgency
@@ -963,6 +1028,7 @@ Committee."""@en .
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalResources
 :LegalResources rdf:type owl:Class ;
+                rdfs:subClassOf :PDPAConcept ;
                 rdfs:label "Legal Resources" .
 
 
@@ -973,7 +1039,7 @@ Committee."""@en .
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Obligation
 :Obligation rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+            rdfs:subClassOf :PDPAConcept ;
             rdfs:comment "A duty imposed by the Personal Data Protection Act on an actor." ;
             rdfs:label "Obligations" ;
             rdfs:seeAlso "RolesAndResponsibilities" .
@@ -1117,7 +1183,8 @@ section 34 paragraph one, section 36 paragraph one, and section 73 paragraph one
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Process
 :Process rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+         rdfs:subClassOf :PDPAConcept ;
+         rdfs:label "Process" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Processing
@@ -1212,7 +1279,8 @@ section 34 paragraph one, section 36 paragraph one, and section 73 paragraph one
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Right
 :Right rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+       rdfs:subClassOf :PDPAConcept ;
+       rdfs:label "Right" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/RightOfAccess
@@ -1276,12 +1344,14 @@ section 34 paragraph one, section 36 paragraph one, and section 73 paragraph one
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Role
 :Role rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+      rdfs:subClassOf :PDPAConcept ;
+      rdfs:label "Role" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Rule
 :Rule rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+      rdfs:subClassOf :PDPAConcept ;
+      rdfs:label "Rule" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SecretaryGeneral
@@ -1356,12 +1426,12 @@ This category includes data pertaining to:
 :StateEnterprise rdf:type owl:Class ;
                  rdfs:subClassOf :PublicSectorEntity ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty :subjectToPDPA ;
-                                   owl:someValuesFrom :PersonalDataProtectionAct
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty :actsAsDataController ;
                                    owl:someValuesFrom :Data_Controller
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :subjectToPDPA ;
+                                   owl:someValuesFrom :PersonalDataProtectionAct
                                  ] ;
                  :example """Use instances only if there have specific classes
 MinistryOfPublicHealth instanceOf GovernmentAgency
@@ -1411,96 +1481,44 @@ StateRailwayOfThailand instanceOf StateEnterprise""" ;
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EmploymentSocialProtection
-:EmploymentSocialProtection rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_CreditBureau
+:EX_CreditBureau rdf:type owl:NamedIndividual ,
+                          :Exemption ;
+                 rdfs:comment "Credit Bureau Exemption" ;
+                 rdfs:label "EX_CreditBureau" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_ContractPerformance
-:LB_ContractPerformance rdf:type owl:NamedIndividual ,
-                                 :LawfulBasis ;
-                        :source :Section24 ;
-                        rdfs:comment "Personal data may be collected without consent when necessary for the performance of a contract with the data subject or to take steps at the data subject's request before entering into a contract." ;
-                        rdfs:isDefinedBy "Section 24(3)" ;
-                        rdfs:label "ContractPerformance" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_Journalism
+:EX_Journalism rdf:type owl:NamedIndividual ,
+                        :Exemption ;
+               rdfs:comment "Journalism / Artistic / Literary Exemption" ;
+               rdfs:label "EX_Journalism" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_HistoricalResearchStatistics
-:LB_HistoricalResearchStatistics rdf:type owl:NamedIndividual ,
-                                          :LawfulBasis ;
-                                 :source :Section24 ;
-                                 rdfs:comment "Personal data may be collected without consent for historical documents, archives for public interest, research, or statistics, where suitable safeguards are provided." ;
-                                 rdfs:isDefinedBy "Section 24(1)" ;
-                                 rdfs:label "HistoricalResearchStatistics" ;
-                                 rdfs:seeAlso "Historical, Research, or Statistics Purpose" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_ParliamentCourt
+:EX_ParliamentCourt rdf:type owl:NamedIndividual ,
+                             :Exemption ;
+                    rdfs:comment "Parliament and Court Exemption" ;
+                    rdfs:label "EX_ParliamentCourt" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_LegalCompliance
-:LB_LegalCompliance rdf:type owl:NamedIndividual ,
-                             :LawfulBasis ;
-                    :source :Section24 ;
-                    rdfs:comment "Personal data may be collected without consent when necessary for compliance with a law to which the Data Controller is subject." ;
-                    rdfs:isDefinedBy "Section 24(6)" ;
-                    rdfs:label "LegalCompliance" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_PersonalHousehold
+:EX_PersonalHousehold rdf:type owl:NamedIndividual ,
+                               :Exemption ;
+                      rdfs:comment "Personal or Household Exemption" ;
+                      rdfs:label "EX_PersonalHousehold" .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_LegitimateInterests
-:LB_LegitimateInterests rdf:type owl:NamedIndividual ,
-                                 :LawfulBasis ;
-                        :source :Section24 ;
-                        rdfs:comment "Personal data may be collected without consent when necessary for legitimate interests of the Data Controller or another person or juristic person, unless overridden by the fundamental rights of the data subject." ;
-                        rdfs:isDefinedBy "Section 24(5)" ;
-                        rdfs:label "LegitimateInterests" .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_RoyalDecree
+:EX_RoyalDecree rdf:type owl:NamedIndividual ,
+                         :Exemption .
 
 
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_PublicTaskOfficialAuthority
-:LB_PublicTaskOfficialAuthority rdf:type owl:NamedIndividual ,
-                                         :LawfulBasis ;
-                                :source :Section24 ;
-                                rdfs:comment "Personal data may be collected without consent when necessary for a task carried out in the public interest by the Data Controller or for exercising official authority vested in the Data Controller." ;
-                                rdfs:isDefinedBy "Section 24(4)" ;
-                                rdfs:label "PublicTaskOfficialAuthority" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LB_VitalInterests
-:LB_VitalInterests rdf:type owl:NamedIndividual ,
-                            :LawfulBasis ;
-                   :source :Section24 ;
-                   rdfs:comment "Personal data may be collected without consent to prevent or suppress danger to a person's life, body, or health." ;
-                   rdfs:isDefinedBy "Section 24(2)" ;
-                   rdfs:label "VitalInterests" .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#LegalClaims
-:LegalClaims rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ManifestlyPublicByConsent
-:ManifestlyPublicByConsent rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#NonProfitLegitimateActivities
-:NonProfitLegitimateActivities rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PreventiveMedicineHealthCare
-:PreventiveMedicineHealthCare rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#PublicHealth
-:PublicHealth rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#ResearchStatisticsPublicInterest
-:ResearchStatisticsPublicInterest rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#SubstantialPublicInterest
-:SubstantialPublicInterest rdf:type owl:NamedIndividual ,
-                                    :PublicSectorEntity .
-
-
-###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#VitalInterests
-:VitalInterests rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#EX_StateSecurity
+:EX_StateSecurity rdf:type owl:NamedIndividual ,
+                           :Exemption ;
+                  rdfs:comment "State Security / Public Safety Exemption" ;
+                  rdfs:label "EX_StateSecurity" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33#Personal_Data_Protection_Act,_B.E._2562_(2019)
@@ -1616,6 +1634,10 @@ The PDPA is Thailand's comprehensive personal data protection law, enacted in 20
              rdfs:label "DataSubject" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/EmploymentSocialProtection
+:EmploymentSocialProtection rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Introduction
 :Introduction rdf:type owl:NamedIndividual ,
                        :Chapter ;
@@ -1630,15 +1652,78 @@ The PDPA is Thailand's comprehensive personal data protection law, enacted in 20
               rdfs:label "Introduction" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_ContractPerformance
+:LB_ContractPerformance rdf:type owl:NamedIndividual ,
+                                 :LawfulBasis ;
+                        :source :Section24 ;
+                        rdfs:comment "Personal data may be collected without consent when necessary for the performance of a contract with the data subject or to take steps at the data subject's request before entering into a contract." ;
+                        rdfs:isDefinedBy "Section 24(3)" ;
+                        rdfs:label "ContractPerformance" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_HistoricalResearchStatistics
+:LB_HistoricalResearchStatistics rdf:type owl:NamedIndividual ,
+                                          :LawfulBasis ;
+                                 :source :Section24 ;
+                                 rdfs:comment "Personal data may be collected without consent for historical documents, archives for public interest, research, or statistics, where suitable safeguards are provided." ;
+                                 rdfs:isDefinedBy "Section 24(1)" ;
+                                 rdfs:label "HistoricalResearchStatistics" ;
+                                 rdfs:seeAlso "Historical, Research, or Statistics Purpose" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_LegalCompliance
+:LB_LegalCompliance rdf:type owl:NamedIndividual ,
+                             :LawfulBasis ;
+                    :source :Section24 ;
+                    rdfs:comment "Personal data may be collected without consent when necessary for compliance with a law to which the Data Controller is subject." ;
+                    rdfs:isDefinedBy "Section 24(6)" ;
+                    rdfs:label "LegalCompliance" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_LegitimateInterests
+:LB_LegitimateInterests rdf:type owl:NamedIndividual ,
+                                 :LawfulBasis ;
+                        :source :Section24 ;
+                        rdfs:comment "Personal data may be collected without consent when necessary for legitimate interests of the Data Controller or another person or juristic person, unless overridden by the fundamental rights of the data subject." ;
+                        rdfs:isDefinedBy "Section 24(5)" ;
+                        rdfs:label "LegitimateInterests" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_PublicTaskOfficialAuthority
+:LB_PublicTaskOfficialAuthority rdf:type owl:NamedIndividual ,
+                                         :LawfulBasis ;
+                                :source :Section24 ;
+                                rdfs:comment "Personal data may be collected without consent when necessary for a task carried out in the public interest by the Data Controller or for exercising official authority vested in the Data Controller." ;
+                                rdfs:isDefinedBy "Section 24(4)" ;
+                                rdfs:label "PublicTaskOfficialAuthority" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LB_VitalInterests
+:LB_VitalInterests rdf:type owl:NamedIndividual ,
+                            :LawfulBasis ;
+                   :source :Section24 ;
+                   rdfs:comment "Personal data may be collected without consent to prevent or suppress danger to a person's life, body, or health." ;
+                   rdfs:isDefinedBy "Section 24(2)" ;
+                   rdfs:label "VitalInterests" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalClaims
+:LegalClaims rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/LegalClaimsException
 :LegalClaimsException rdf:type owl:NamedIndividual ,
-                               :ExplicitConsent ;
+                               :ExplicitConsentException ;
                       rdfs:label "LegalClaimsException" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ManifestlyPublicByConsent
+:ManifestlyPublicByConsent rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ManifestlyPublicException
 :ManifestlyPublicException rdf:type owl:NamedIndividual ,
-                                    :ExplicitConsent ;
+                                    :ExplicitConsentException ;
                            rdfs:label "ManifestlyPublicException" .
 
 
@@ -1655,8 +1740,12 @@ The PDPA is Thailand's comprehensive personal data protection law, enacted in 20
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/NonProfitException
 :NonProfitException rdf:type owl:NamedIndividual ,
-                             :ExplicitConsent ;
+                             :ExplicitConsentException ;
                     rdfs:label "NonProfitException" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/NonProfitLegitimateActivities
+:NonProfitLegitimateActivities rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/Office
@@ -1669,10 +1758,25 @@ The PDPA is Thailand's comprehensive personal data protection law, enacted in 20
                  :Entity .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PreventiveMedicineHealthCare
+:PreventiveMedicineHealthCare rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PublicHealth
+:PublicHealth rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/PublicHealthException
 :PublicHealthException rdf:type owl:NamedIndividual ,
-                                :ExplicitConsent ;
+                                :ExplicitConsentException ;
                        rdfs:label "PublicHealthException" .
+
+
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/ResearchStatisticsPublicInterest
+:ResearchStatisticsPublicInterest rdf:type owl:NamedIndividual ,
+                                           :ExplicitConsentException ;
+                                  rdfs:comment "Research/Statistics Exception" ;
+                                  rdfs:label "ResearchStatisticsException" .
 
 
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SecretaryGeneral
@@ -1883,9 +1987,14 @@ The PDPA is Thailand's comprehensive personal data protection law, enacted in 20
           rdfs:label "Section9" .
 
 
+###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/SubstantialPublicInterest
+:SubstantialPublicInterest rdf:type owl:NamedIndividual ,
+                                    :PublicSectorEntity .
+
+
 ###  http://www.semanticweb.org/kyith/ontologies/2025/6/untitled-ontology-33/VitalInterestException
 :VitalInterestException rdf:type owl:NamedIndividual ,
-                                 :ExplicitConsent ;
+                                 :ExplicitConsentException ;
                         rdfs:label "VitalInterestException" .
 
 
